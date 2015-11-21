@@ -1,15 +1,14 @@
-﻿using UnityEngine;
-using System.Collections;
+﻿using System;
+using UnityEngine;
 
-public class I_ActorState : MonoBehaviour {
+public interface I_ActorState
+{
+    void OnEnter(Transform actor);
+    void OnExit(Transform actor);
 
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
+    // Update is called once per frame
+    I_ActorState Update(Transform actor, float dt);
+    I_ActorState HandleInput(Transform actor);
+    I_ActorState OnCollisionEnter(Transform actor, Collision2D c);
+    I_ActorState OnCollisionStay(Transform actor, Collision2D c);
 }
