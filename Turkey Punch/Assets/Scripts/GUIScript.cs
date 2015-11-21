@@ -33,7 +33,7 @@ public class GUIScript : MonoBehaviour
         }
         if (Input.GetKeyUp(KeyCode.S))
         {
-            DamageP2(50);
+            DamageP2(5);
         }
 
         /* draw and update timer */
@@ -64,12 +64,12 @@ public class GUIScript : MonoBehaviour
 
     public void DamageP1(float amount) {
         p1life -= amount;
-        transform.FindChild("GUI").transform.FindChild("P1HealthBar").transform.localScale += new Vector3((float)(-.01* amount), 0, 0);
+        transform.FindChild("P1HealthBar").transform.localScale += new Vector3((float)(-.01* amount), 0, 0);
         CheckLife(1);
     }
     public void DamageP2(float amount) {
         p2life -= amount;
-        transform.FindChild("GUI").transform.FindChild("P2HealthBar").transform.localScale += new Vector3((float)(-.01 * amount), 0, 0);
+        transform.FindChild("P2HealthBar").transform.localScale += new Vector3((float)(-.01 * amount), 0, 0);
         CheckLife(2);
     }
     
