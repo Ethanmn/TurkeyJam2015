@@ -40,7 +40,7 @@ public class Santa_IdleState : I_ActorState
             return new Santa_PunchState();
         }
 
-        if (Input.GetKeyDown(ac.LEFT) || Input.GetKeyDown(ac.RIGHT))
+        if (Input.GetKey(ac.LEFT) || Input.GetKey(ac.RIGHT))
         {
             return new Santa_WalkState();
         }

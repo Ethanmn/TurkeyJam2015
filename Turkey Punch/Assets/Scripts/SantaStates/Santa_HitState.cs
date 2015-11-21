@@ -26,7 +26,6 @@ public class Santa_HitState : I_ActorState
             timer += dt;
             return null;
         }
-        
     }
 
     I_ActorState I_ActorState.HandleInput(Transform actor)
