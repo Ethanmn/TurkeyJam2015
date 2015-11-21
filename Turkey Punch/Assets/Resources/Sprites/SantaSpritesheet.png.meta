@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 52011fb3f3ad9dd4682217849cb2e857
-timeCreated: 1448087751
+timeCreated: 1448090984
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -16,6 +16,9 @@ TextureImporter:
     21300018: SantaSpritesheet_9
     21300020: SantaSpritesheet_10
     21300022: SantaSpritesheet_11
+    21300024: SantaSpritesheet_12
+    21300026: SantaSpritesheet_13
+    21300028: SantaSpritesheet_14
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -66,121 +69,151 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 48
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        y: 672
+        width: 336
+        height: 336
+      alignment: 9
+      pivot: {x: .386524796, y: .348699808}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: SantaSpritesheet_1
       rect:
         serializedVersion: 2
-        x: 48
-        y: 48
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 336
+        y: 672
+        width: 336
+        height: 336
+      alignment: 9
+      pivot: {x: .386524796, y: .348699808}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: SantaSpritesheet_2
       rect:
         serializedVersion: 2
-        x: 96
-        y: 48
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 672
+        y: 672
+        width: 336
+        height: 336
+      alignment: 9
+      pivot: {x: .386524796, y: .348699808}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: SantaSpritesheet_3
       rect:
         serializedVersion: 2
-        x: 144
-        y: 48
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1008
+        y: 672
+        width: 336
+        height: 336
+      alignment: 9
+      pivot: {x: .386524796, y: .348699808}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: SantaSpritesheet_4
       rect:
         serializedVersion: 2
-        x: 192
-        y: 48
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1344
+        y: 672
+        width: 336
+        height: 336
+      alignment: 9
+      pivot: {x: .386524796, y: .348699808}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: SantaSpritesheet_5
       rect:
         serializedVersion: 2
-        x: 240
-        y: 48
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1680
+        y: 672
+        width: 336
+        height: 336
+      alignment: 9
+      pivot: {x: .386524796, y: .348699808}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: SantaSpritesheet_6
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        y: 336
+        width: 336
+        height: 336
+      alignment: 9
+      pivot: {x: .386524796, y: .348699808}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: SantaSpritesheet_7
       rect:
         serializedVersion: 2
-        x: 48
-        y: 0
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 336
+        y: 336
+        width: 336
+        height: 336
+      alignment: 9
+      pivot: {x: .386524796, y: .348699808}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: SantaSpritesheet_8
       rect:
         serializedVersion: 2
-        x: 96
-        y: 0
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 672
+        y: 336
+        width: 336
+        height: 336
+      alignment: 9
+      pivot: {x: .386524796, y: .348699808}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: SantaSpritesheet_9
       rect:
         serializedVersion: 2
-        x: 144
-        y: 0
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1008
+        y: 336
+        width: 336
+        height: 336
+      alignment: 9
+      pivot: {x: .386524796, y: .348699808}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: SantaSpritesheet_10
       rect:
         serializedVersion: 2
-        x: 192
-        y: 0
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1344
+        y: 336
+        width: 336
+        height: 336
+      alignment: 9
+      pivot: {x: .386524796, y: .348699808}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: SantaSpritesheet_11
       rect:
         serializedVersion: 2
-        x: 240
+        x: 1680
+        y: 336
+        width: 336
+        height: 336
+      alignment: 9
+      pivot: {x: .386524796, y: .348699808}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SantaSpritesheet_12
+      rect:
+        serializedVersion: 2
+        x: 0
         y: 0
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 336
+        height: 336
+      alignment: 9
+      pivot: {x: .386524796, y: .348699808}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SantaSpritesheet_13
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 0
+        width: 336
+        height: 336
+      alignment: 9
+      pivot: {x: .386524796, y: .348699808}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SantaSpritesheet_14
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 0
+        width: 336
+        height: 336
+      alignment: 9
+      pivot: {x: .386524796, y: .348699808}
       border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 

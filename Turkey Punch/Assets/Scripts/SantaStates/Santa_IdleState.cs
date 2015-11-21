@@ -3,9 +3,14 @@ using UnityEngine;
 
 public class Santa_IdleState : I_ActorState
 {
+    private Animator santaAnim;
+
     void I_ActorState.OnEnter(Transform actor)
     {
         Debug.Log("Santa entered idle state");
+
+        actor.GetComponent<Animator>().SetFloat("MoveSpeed", 0);
+
         /*
         actor.GetComponent<SpriteRenderer>().color = new Color(1, 0, 0, 0.5f);
         Transform trans = actor.GetComponent<Transform>();

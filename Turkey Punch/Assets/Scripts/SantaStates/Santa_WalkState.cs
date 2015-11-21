@@ -6,13 +6,13 @@ public class Santa_WalkState : I_ActorState
     void I_ActorState.OnEnter(Transform actor)
     {
         Debug.Log("Santa entered walk state");
-        actor.GetComponent<Transform>().localScale = new Vector3(3, 3);
+        //actor.GetComponent<Transform>().localScale = new Vector3(3, 3);
     }
 
     void I_ActorState.OnExit(Transform actor)
     {
         Debug.Log("Santa exited walk state");
-        actor.GetComponent<Transform>().localScale = new Vector3(1, 1);
+        //actor.GetComponent<Transform>().localScale = new Vector3(1, 1);
     }
 
     I_ActorState I_ActorState.Update(Transform actor, float dt)
@@ -55,11 +55,15 @@ public class Santa_WalkState : I_ActorState
         if (Input.GetKey(KeyCode.A))
         {
             moveDir.x = -0.1f;
+            actor.localScale = new Vector3(-1, 1);
         }
         else if (Input.GetKey(KeyCode.D))
         {
             moveDir.x = 0.1f;
+            actor.localScale = new Vector3(1, 1);
         }
+
+        actor.GetComponent<Animator>().SetFloat("MoveSpeed", Math.Abs(moveDir.x));
 
         trans.Translate(moveDir);
     }

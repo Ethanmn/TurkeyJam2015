@@ -28,8 +28,10 @@ public class ActorController : MonoBehaviour
     {
         // Update the state
         I_ActorState newState = state.HandleInput(transform);
+
         if (newState != null)
         {
+            Debug.Log("New state is " + newState.GetType());
             SwitchState(newState);
         }
 
@@ -54,6 +56,7 @@ public class ActorController : MonoBehaviour
     {
         state.OnExit(transform);
         state = newState;
+        state.OnEnter(transform);
     }
 
     /// <summary>
