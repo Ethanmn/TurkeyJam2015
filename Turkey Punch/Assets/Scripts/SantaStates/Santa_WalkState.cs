@@ -5,14 +5,16 @@ public class Santa_WalkState : I_ActorState
 {
     int facing = 0;
 
+    static float maxSpeed = 0.1f;
+
     void I_ActorState.OnEnter(Transform actor)
     {
-        //actor.GetComponent<Transform>().localScale = new Vector3(3, 3);
+        Debug.Log("Santa entered walk state");
     }
 
     void I_ActorState.OnExit(Transform actor)
     {
-        //actor.GetComponent<Transform>().localScale = new Vector3(1, 1);
+        Debug.Log("Santa exited walk state");
     }
 
     I_ActorState I_ActorState.Update(Transform actor, float dt)
@@ -22,11 +24,13 @@ public class Santa_WalkState : I_ActorState
 
     I_ActorState I_ActorState.HandleInput(Transform actor)
     {
-        if (Input.GetMouseButtonDown(0))
+        ActorController ac = actor.GetComponent<ActorController>();
+
+        if (Input.GetKeyDown(ac.ATTACK1))
         {
             return new Santa_PunchState();
         }
-        else if (!Input.GetKey(KeyCode.A) && !Input.GetKey(KeyCode.D))
+        else if (!Input.GetKey(ac.LEFT) && !Input.GetKey(ac.RIGHT))
         {
             return new Santa_IdleState();
         }
@@ -49,6 +53,9 @@ public class Santa_WalkState : I_ActorState
 
     void Move(Transform actor)
     {
+        ActorController ac = actor.GetComponent<ActorController>();
+        Transform trans = actor.GetComponent<Transform>();
+
         Vector3 moveDir = new Vector3();
 
         Vector3 leftFace = new Vector3(-1, 1);
@@ -56,10 +63,12 @@ public class Santa_WalkState : I_ActorState
 
         ParticleSystem snow = actor.gameObject.GetComponentInChildren<ParticleSystem>();
 
-        if (Input.GetKey(KeyCode.A))
+        if (Input.GetKey(ac.LEFT))
         {
             // Direction is move left 
-            moveDir.x = -0.1f;
+
+            moveDir.x = -maxSpeed;
+
             // Flip Santa's model left
             actor.localScale = leftFace;
             /*
@@ -74,10 +83,12 @@ public class Santa_WalkState : I_ActorState
 
             facing = 1;
         }
-        else if (Input.GetKey(KeyCode.D))
+        else if (Input.GetKey(ac.RIGHT))
         {
             // Direction is move right
-            moveDir.x = 0.1f;
+
+            moveDir.x = maxSpeed;
+
             // Flip Santa's model right
             actor.localScale = rightFace;
             /*
@@ -93,8 +104,6 @@ public class Santa_WalkState : I_ActorState
             facing = 0;
         }
 
-        actor.GetComponent<Animator>().SetFloat("MoveSpeed", Math.Abs(moveDir.x));
-
-        actor.Translate(moveDir);
+        trans.Translate(moveDir);
     }
 }

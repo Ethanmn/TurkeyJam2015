@@ -7,6 +7,7 @@ public class Santa_HitState : I_ActorState
     void I_ActorState.OnEnter(Transform actor)
     {
         actor.GetComponent<Animator>().SetBool("IsHit", true);
+        actor.GetComponentInChildren<ParticleSystem>().Play();
     }
 
     void I_ActorState.OnExit(Transform actor)
