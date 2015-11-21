@@ -31,7 +31,6 @@ public class ActorController : MonoBehaviour
 
         if (newState != null)
         {
-            Debug.Log("New state is " + newState.GetType());
             SwitchState(newState);
         }
 

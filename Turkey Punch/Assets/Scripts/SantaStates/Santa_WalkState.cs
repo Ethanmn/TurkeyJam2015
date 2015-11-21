@@ -7,13 +7,11 @@ public class Santa_WalkState : I_ActorState
 
     void I_ActorState.OnEnter(Transform actor)
     {
-        Debug.Log("Santa entered walk state");
         //actor.GetComponent<Transform>().localScale = new Vector3(3, 3);
     }
 
     void I_ActorState.OnExit(Transform actor)
     {
-        Debug.Log("Santa exited walk state");
         //actor.GetComponent<Transform>().localScale = new Vector3(1, 1);
     }
 
@@ -26,7 +24,7 @@ public class Santa_WalkState : I_ActorState
     {
         if (Input.GetMouseButtonDown(0))
         {
-            return new Santa_HitState();
+            return new Santa_PunchState();
         }
         else if (!Input.GetKey(KeyCode.A) && !Input.GetKey(KeyCode.D))
         {

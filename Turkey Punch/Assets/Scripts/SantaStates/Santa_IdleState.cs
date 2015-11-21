@@ -7,14 +7,11 @@ public class Santa_IdleState : I_ActorState
 
     void I_ActorState.OnEnter(Transform actor)
     {
-        Debug.Log("Santa entered idle state");
-
         actor.GetComponent<Animator>().SetFloat("MoveSpeed", 0);
     }
 
     void I_ActorState.OnExit(Transform actor)
     {
-        Debug.Log("Santa exited idle state");
     }
 
     I_ActorState I_ActorState.Update(Transform actor, float dt)
@@ -26,7 +23,7 @@ public class Santa_IdleState : I_ActorState
     {
         if (Input.GetMouseButton(0))
         {
-            return new Santa_HitState();
+            return new Santa_PunchState();
         }
 
         if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D))
