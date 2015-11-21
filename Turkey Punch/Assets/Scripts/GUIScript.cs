@@ -47,7 +47,10 @@ public class GUIScript : MonoBehaviour
                 GUI.Label(new Rect(412.5f, 200, 50, 50), (countdownTimer-1).ToString(), guiStyle);
             } else if (countdownTimer == 1) {
                 GUI.Label(new Rect(350, 200, 50, 50), "FIGHT", guiStyle);
-            } else gameOn = true;
+            } else if (countdownTimer <= -1) {
+                GUI.Label(new Rect(280, 200, 50, 50), "TIME'S UP!", guiStyle);
+            }
+            else gameOn = true;
         }
         GUI.Label(new Rect(400, 400, 400, 400), timer.ToString(), guiStyle);
     }
@@ -57,6 +60,8 @@ public class GUIScript : MonoBehaviour
             if (timer <= 0)
             {
                 /* TO DO: Implement game over mechanic here. */
+                countdownTimer = -1;
+                gameOn = false;
             }
         }
     }
