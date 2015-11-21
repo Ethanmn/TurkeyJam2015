@@ -103,6 +103,7 @@ public class Santa_WalkState : I_ActorState
 
             facing = 0;
         }
+        actor.GetComponent<Animator>().SetFloat("MoveSpeed", Math.Abs(moveDir.x));
 
         trans.Translate(moveDir);
     }
