@@ -24,11 +24,11 @@ public class Turkey_IdleState : I_ActorState
 
     I_ActorState I_ActorState.HandleInput(Transform actor)
     {
-        /*
-        if (Input.GetMouseButton(0))
+        
+        if (Input.GetKey(KeyCode.H))
         {
-            return new Turkey_HitState();
-        }*/
+            return new Turkey_PunchState();
+        }
 
         if (Input.GetKeyDown(KeyCode.J) || Input.GetKeyDown(KeyCode.L))
         {

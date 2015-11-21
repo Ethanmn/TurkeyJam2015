@@ -3,21 +3,47 @@ using UnityEngine;
 
 public class Turkey_PunchState : I_ActorState
 {
+    private float timer;
+
     void I_ActorState.OnEnter(Transform actor)
     {
-        Debug.Log("Turkey entered punch state");
-        SpriteRenderer sr = actor.GetComponent<SpriteRenderer>();
-        sr.color = new Color(sr.color.b, sr.color.r, sr.color.g, (sr.color.a > 0) ? 0 : 1);
+        //Debug.Log("Turkey entered punch state");
+        // Set the animation flag
+        actor.GetComponent<Animator>().SetBool("IsPunching", true);
+
+        // Reset the timer
+        timer = 0;
+
+        // Enable the hit box so it can hit things
+        actor.FindChild("PunchHitBox").GetComponent<BoxCollider2D>().enabled = true;
     }
 
     void I_ActorState.OnExit(Transform actor)
     {
-        Debug.Log("Turkey exited punch state");
+        //Debug.Log("Turkey exited punch state");
+
+        // Set the animation flag
+        actor.GetComponent<Animator>().SetBool("IsPunching", false);
+
+        // Dissable the hit box so it doesn't hit things
+        actor.FindChild("PunchHitBox").GetComponent<BoxCollider2D>().enabled = false;
     }
 
     I_ActorState I_ActorState.Update(Transform actor, float dt)
     {
-        return new Santa_IdleState();
+        // If attack animation is over
+        if (timer >= 0.5)
+        {
+            // Exit the state
+            return new Turkey_IdleState();
+        }
+        else
+        {
+            // Increment the timer
+            timer += dt;
+            // Stay in the state
+            return null;
+        }
     }
 
     I_ActorState I_ActorState.HandleInput(Transform actor)

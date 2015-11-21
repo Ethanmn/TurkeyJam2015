@@ -21,7 +21,7 @@ public class Santa_IdleState : I_ActorState
 
     I_ActorState I_ActorState.HandleInput(Transform actor)
     {
-        if (Input.GetMouseButton(0))
+        if (Input.GetKey(KeyCode.F))
         {
             return new Santa_PunchState();
         }
