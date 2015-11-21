@@ -6,15 +6,15 @@ public class Turkey_HitState : I_ActorState
     float timer = 0;
     void I_ActorState.OnEnter(Transform actor)
     {
-        //Debug.Log("Turkey entered hit state");
-        actor.GetComponent<Animator>().SetBool("IsHit", true);
+        Debug.Log("Turkey entered hit state");
+        //actor.GetComponent<Animator>().SetBool("IsHit", true);
         actor.GetComponentInChildren<ParticleSystem>().Play();
     }
 
     void I_ActorState.OnExit(Transform actor)
     {
         //Debug.Log("Turkey exited hit state");
-        actor.GetComponent<Animator>().SetBool("IsHit", false);
+        //actor.GetComponent<Animator>().SetBool("IsHit", false);
     }
 
     I_ActorState I_ActorState.Update(Transform actor, float dt)

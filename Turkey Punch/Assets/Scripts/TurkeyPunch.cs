@@ -25,7 +25,7 @@ public class TurkeyPunch : MonoBehaviour {
         }
 
         // If the other hit box is Santa's hitbox
-        if (col.name == "SantaHitBox")
+        else if (col.name == "SantaHitBox")
         {
             Debug.Log("HIT THE SANTA! " + col.transform.parent.name);
             // Hit the Santa
