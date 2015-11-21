@@ -3,6 +3,8 @@ using UnityEngine;
 
 public class Santa_WalkState : I_ActorState
 {
+    int facing = 0;
+
     void I_ActorState.OnEnter(Transform actor)
     {
         Debug.Log("Santa entered walk state");
@@ -24,7 +26,7 @@ public class Santa_WalkState : I_ActorState
     {
         if (Input.GetMouseButtonDown(0))
         {
-            return new Santa_PunchState();
+            return new Santa_HitState();
         }
         else if (!Input.GetKey(KeyCode.A) && !Input.GetKey(KeyCode.D))
         {
@@ -49,22 +51,52 @@ public class Santa_WalkState : I_ActorState
 
     void Move(Transform actor)
     {
-        Transform trans = actor.GetComponent<Transform>();
         Vector3 moveDir = new Vector3();
+
+        Vector3 leftFace = new Vector3(-1, 1);
+        Vector3 rightFace = new Vector3(1, 1);
+
+        ParticleSystem snow = actor.gameObject.GetComponentInChildren<ParticleSystem>();
 
         if (Input.GetKey(KeyCode.A))
         {
+            // Direction is move left 
             moveDir.x = -0.1f;
-            actor.localScale = new Vector3(-1, 1);
+            // Flip Santa's model left
+            actor.localScale = leftFace;
+            /*
+            // Flip snow particle engine left
+            if (facing != 1)
+                snow.transform.localRotation = new Quaternion(snow.transform.localRotation.x, -snow.transform.localRotation.y, snow.transform.localRotation.z, snow.transform.localRotation.w);
+            
+            // Play the effect
+            if (UnityEngine.Random.Range(0, 11) % 5 == 0)
+                snow.Play();
+                */
+
+            facing = 1;
         }
         else if (Input.GetKey(KeyCode.D))
         {
+            // Direction is move right
             moveDir.x = 0.1f;
-            actor.localScale = new Vector3(1, 1);
+            // Flip Santa's model right
+            actor.localScale = rightFace;
+            /*
+            // Flip snow particle engine right
+            if (facing != 0)
+            snow.transform.localRotation = new Quaternion(snow.transform.localRotation.x, -snow.transform.localRotation.y, snow.transform.localRotation.z, snow.transform.localRotation.w);
+            
+            // Play the effect
+            if (UnityEngine.Random.Range(0, 11) % 5 == 0)
+                snow.Play();
+                */
+
+            facing = 0;
         }
 
         actor.GetComponent<Animator>().SetFloat("MoveSpeed", Math.Abs(moveDir.x));
 
-        trans.Translate(moveDir);
+        actor.Translate(moveDir);
     }
 }
