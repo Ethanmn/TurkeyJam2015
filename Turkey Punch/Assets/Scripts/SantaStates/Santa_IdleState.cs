@@ -8,6 +8,13 @@ public class Santa_IdleState : I_ActorState
     void I_ActorState.OnEnter(Transform actor)
     {
         actor.GetComponent<Animator>().SetFloat("MoveSpeed", 0);
+
+        /*
+        actor.GetComponent<SpriteRenderer>().color = new Color(1, 0, 0, 0.5f);
+        Transform trans = actor.GetComponent<Transform>();
+        trans.localScale = new Vector3(3, 3);
+        */
+        
     }
 
     void I_ActorState.OnExit(Transform actor)
@@ -16,6 +23,11 @@ public class Santa_IdleState : I_ActorState
 
     I_ActorState I_ActorState.Update(Transform actor, float dt)
     {
+        /*
+        Transform trans = actor.GetComponent<Transform>();
+        float time = Time.time;
+        trans.localPosition = new Vector3(Mathf.Sin(time), Mathf.Cos(time));
+        */
         return null;
     }
 
@@ -26,7 +38,7 @@ public class Santa_IdleState : I_ActorState
             return new Santa_PunchState();
         }
 
-        if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D))
+        if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.D))
         {
             return new Santa_WalkState();
         }
