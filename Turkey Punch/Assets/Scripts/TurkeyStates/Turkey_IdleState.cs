@@ -28,7 +28,7 @@ public class Turkey_IdleState : I_ActorState
 
         if (Input.GetKey(ac.ATTACK1))
         {
-            return new Turkey_HitState();
+            return new Turkey_PunchState();
         }
 
         if (Input.GetKeyDown(ac.LEFT) || Input.GetKeyDown(ac.RIGHT))

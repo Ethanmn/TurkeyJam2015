@@ -28,7 +28,7 @@ public class Santa_WalkState : I_ActorState
 
         if (Input.GetKeyDown(ac.ATTACK1))
         {
-            return new Santa_HitState();
+            return new Santa_PunchState();
         }
         else if (!Input.GetKey(ac.LEFT) && !Input.GetKey(ac.RIGHT))
         {

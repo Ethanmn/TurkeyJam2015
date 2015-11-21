@@ -24,20 +24,16 @@ public class GUIScript : MonoBehaviour
         timer = START_TIMER_VAL;
         timerText = gameObject.GetComponentsInChildren<Text>()[1];
         countdownTimerText = gameObject.GetComponentsInChildren<Text>()[0];
-        print(timerText);
     }
     public void Update() {
         /* TO DO: Implement these functions on hitbox collisions. */
         if (Input.GetKeyUp(KeyCode.A))
         {
-            timer--;
             DamageP1(5);
-            print(p1life);
         }
         if (Input.GetKeyUp(KeyCode.S))
         {
             DamageP2(50);
-            print(p2life);
         }
 
         /* draw and update timer */

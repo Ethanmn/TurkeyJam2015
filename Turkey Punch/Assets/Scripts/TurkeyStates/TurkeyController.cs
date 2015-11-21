@@ -10,7 +10,7 @@ public class TurkeyController : ActorController {
         left = KeyCode.J;
         right = KeyCode.L;
         jump = KeyCode.RightShift;
-        attack1 = KeyCode.Mouse1;
+        attack1 = KeyCode.H;
 
         base.Start();
 	}
