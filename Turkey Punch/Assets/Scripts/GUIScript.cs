@@ -2,23 +2,29 @@
 
 public class GUIScript : MonoBehaviour
 {
-    private readonly float HEALTH_BAR_WIDTH = 370.9f;
+    private readonly int START_TIMER_VAL = 90;
+    private readonly int COUNTDOWN_TIMER_VAL = 4;
+    private bool gameOn = false;
 
-    public float p1life;
-    public float p2life;
+    private GUIStyle guiStyle;
+    private int timer;
+    private int countdownTimer;
+
+    private float p1life;
+    private float p2life;
 
     public void Start() {
         p1life = 100;
         p2life = 100;
+        guiStyle = new GUIStyle();
+        guiStyle.fontSize = 60;
+        timer = START_TIMER_VAL;
     }
     public void Update() {
-        /* Uncomment these to see the health bars move at a constant rate.
-              TO DO: Implement these functions on hitbox collisions.
-        */
-        /*DamageP1(1);
-        DamageP2(1);*/
+        /* TO DO: Implement these functions on hitbox collisions. */
         if (Input.GetKeyUp(KeyCode.A))
         {
+            timer--;
             DamageP1(5);
             print(p1life);
         }
@@ -27,23 +33,46 @@ public class GUIScript : MonoBehaviour
             DamageP2(50);
             print(p2life);
         }
+
+        /* draw and update timer */
+        OnGUI();
+        TimerUpdate();
     }
 
-    /* TO DO: Figure out scale amount to connect 1 point of damage to 
-          1/100th of the health bar (perhaps 1/3.709 or something to that effect?) */
+    /* this function draws the timer to the screen */
+    private void OnGUI() {
+        if (!gameOn) {
+            countdownTimer = COUNTDOWN_TIMER_VAL - (int)Time.timeSinceLevelLoad;
+            if (countdownTimer > 1) {
+                GUI.Label(new Rect(412.5f, 200, 50, 50), (countdownTimer-1).ToString(), guiStyle);
+            } else if (countdownTimer == 1) {
+                GUI.Label(new Rect(350, 200, 50, 50), "FIGHT", guiStyle);
+            } else gameOn = true;
+        }
+        GUI.Label(new Rect(400, 400, 400, 400), timer.ToString(), guiStyle);
+    }
+    private void TimerUpdate() {
+        if (gameOn) {
+            timer = START_TIMER_VAL - (int)Time.timeSinceLevelLoad + COUNTDOWN_TIMER_VAL;
+            if (timer <= 0)
+            {
+                /* TO DO: Implement game over mechanic here. */
+            }
+        }
+    }
+
     public void DamageP1(float amount) {
         p1life -= amount;
-        transform.FindChild("P1HealthBar").transform.localScale += new Vector3((float)(-.01* amount), 0, 0);
+        transform.FindChild("GUI").transform.FindChild("P1HealthBar").transform.localScale += new Vector3((float)(-.01* amount), 0, 0);
         CheckLife(1);
     }
     public void DamageP2(float amount) {
         p2life -= amount;
-        transform.FindChild("P2HealthBar").transform.localScale += new Vector3((float)(-.01 * amount), 0, 0);
+        transform.FindChild("GUI").transform.FindChild("P2HealthBar").transform.localScale += new Vector3((float)(-.01 * amount), 0, 0);
         CheckLife(2);
     }
     
-    private void CheckLife(int player) /* perhaps modify return type to int? */
-    {
+    private void CheckLife(int player) { /* perhaps modify return type to int? */ 
         switch (player)
         {
             case 1:
