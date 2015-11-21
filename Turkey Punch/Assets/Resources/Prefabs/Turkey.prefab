@@ -28,8 +28,6 @@ GameObject:
   - 212: {fileID: 21261832}
   - 95: {fileID: 9506232}
   - 114: {fileID: 11416438}
-  - 50: {fileID: 5086260}
-  - 58: {fileID: 5811046}
   m_Layer: 0
   m_Name: Turkey
   m_TagString: Untagged
@@ -49,6 +47,24 @@ GameObject:
   - 199: {fileID: 19903842}
   m_Layer: 0
   m_Name: HitFeathers
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &138892
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 421146}
+  - 50: {fileID: 5008054}
+  - 61: {fileID: 6168292}
+  - 114: {fileID: 11437042}
+  m_Layer: 0
+  m_Name: PunchHitBox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -78,8 +94,21 @@ Transform:
   m_Children:
   - {fileID: 401340}
   - {fileID: 466302}
+  - {fileID: 421146}
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!4 &421146
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 138892}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.36000001, y: .180000007, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 419706}
+  m_RootOrder: 2
 --- !u!4 &466302
 Transform:
   m_ObjectHideFlags: 1
@@ -92,6 +121,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 419706}
   m_RootOrder: 1
+--- !u!50 &5008054
+Rigidbody2D:
+  serializedVersion: 2
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 138892}
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: .0500000007
+  m_GravityScale: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!50 &5031236
 Rigidbody2D:
   serializedVersion: 2
@@ -108,35 +153,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!50 &5086260
-Rigidbody2D:
-  serializedVersion: 2
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 130354}
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: .0500000007
-  m_GravityScale: 1
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
---- !u!58 &5811046
-CircleCollider2D:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 130354}
-  m_Enabled: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 1.67999995
 --- !u!58 &5853646
 CircleCollider2D:
   m_ObjectHideFlags: 1
@@ -150,6 +166,19 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: .5
+--- !u!61 &6168292
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 138892}
+  m_Enabled: 0
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_Offset: {x: -.0466076136, y: .441608012}
+  serializedVersion: 2
+  m_Size: {x: .950218439, y: 2.22768927}
 --- !u!95 &9506232
 Animator:
   serializedVersion: 3
@@ -175,7 +204,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 130354}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7fc279eff5331e741be697f404c7d2dc, type: 3}
+  m_Script: {fileID: 11500000, guid: ee4de1ff435fe0341a3c3b054318aafb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &11437042
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 138892}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4f7658a05581434cb0a54ec7dac1cf6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!198 &19831982
@@ -191,7 +231,7 @@ ParticleSystem:
   looping: 0
   prewarm: 0
   playOnAwake: 0
-  moveWithTransform: 1
+  moveWithTransform: 0
   InitialModule:
     enabled: 1
     startLifetime:
@@ -355,7 +395,7 @@ ParticleSystem:
         rgba: 4294967295
       minMaxState: 0
     startSize:
-      scalar: 1
+      scalar: .699999988
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -421,8 +461,8 @@ ParticleSystem:
   ShapeModule:
     serializedVersion: 2
     enabled: 1
-    type: 10
-    radius: 1
+    type: 11
+    radius: .800000012
     angle: 25
     length: 5
     boxX: 1
@@ -468,7 +508,7 @@ ParticleSystem:
         m_PreInfinity: 2
         m_PostInfinity: 2
       minMaxState: 0
-    cnt0: 5
+    cnt0: 10
     cnt1: 30
     cnt2: 30
     cnt3: 30
@@ -1286,7 +1326,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 00d89d61cb90d0548bbd7cc1ffe618ed, type: 3}
+  m_Sprite: {fileID: 21300024, guid: 00d89d61cb90d0548bbd7cc1ffe618ed, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &100100000
 Prefab:
