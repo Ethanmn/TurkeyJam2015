@@ -1,7 +1,10 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 
 public class GUIScript : MonoBehaviour
 {
+    Text timerText;
+    Text countdownTimerText;
     private readonly int START_TIMER_VAL = 90;
     private readonly int COUNTDOWN_TIMER_VAL = 4;
     private bool gameOn = false;
@@ -19,6 +22,9 @@ public class GUIScript : MonoBehaviour
         guiStyle = new GUIStyle();
         guiStyle.fontSize = 60;
         timer = START_TIMER_VAL;
+        timerText = gameObject.GetComponentsInChildren<Text>()[1];
+        countdownTimerText = gameObject.GetComponentsInChildren<Text>()[0];
+        print(timerText);
     }
     public void Update() {
         /* TO DO: Implement these functions on hitbox collisions. */
@@ -35,27 +41,20 @@ public class GUIScript : MonoBehaviour
         }
 
         /* draw and update timer */
-        OnGUI();
         TimerUpdate();
     }
 
     /* this function draws the timer to the screen */
-    private void OnGUI() {
-        if (!gameOn) {
-            countdownTimer = COUNTDOWN_TIMER_VAL - (int)Time.timeSinceLevelLoad;
-            if (countdownTimer > 1) {
-                GUI.Label(new Rect(412.5f, 200, 50, 50), (countdownTimer-1).ToString(), guiStyle);
-            } else if (countdownTimer == 1) {
-                GUI.Label(new Rect(350, 200, 50, 50), "FIGHT", guiStyle);
-            } else if (countdownTimer <= -1) {
-                GUI.Label(new Rect(280, 200, 50, 50), "TIME'S UP!", guiStyle);
-            }
-            else gameOn = true;
-        }
-        GUI.Label(new Rect(400, 400, 400, 400), timer.ToString(), guiStyle);
-    }
     private void TimerUpdate() {
-        if (gameOn) {
+        if (!gameOn)
+        {
+            countdownTimer = COUNTDOWN_TIMER_VAL - (int)Time.timeSinceLevelLoad;
+            if (countdownTimer > 1) countdownTimerText.text = (countdownTimer - 1).ToString();
+            else if (countdownTimer == 1) countdownTimerText.text = "FIGHT!";
+            else if (countdownTimer <= -1) countdownTimerText.text = "TIME'S UP!";
+            else gameOn = true;
+        } else {
+            countdownTimerText.text = "";
             timer = START_TIMER_VAL - (int)Time.timeSinceLevelLoad + COUNTDOWN_TIMER_VAL;
             if (timer <= 0)
             {
@@ -64,6 +63,7 @@ public class GUIScript : MonoBehaviour
                 gameOn = false;
             }
         }
+        timerText.text = timer.ToString();
     }
 
     public void DamageP1(float amount) {
