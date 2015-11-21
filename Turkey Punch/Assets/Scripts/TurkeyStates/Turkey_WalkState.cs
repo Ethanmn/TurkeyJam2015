@@ -3,16 +3,17 @@ using UnityEngine;
 
 public class Turkey_WalkState : I_ActorState
 {
+    KeyCode left = KeyCode.J;
+    KeyCode right = KeyCode.L;
+
     void I_ActorState.OnEnter(Transform actor)
     {
-        Debug.Log("Santa entered walk state");
-        //actor.GetComponent<Transform>().localScale = new Vector3(3, 3);
+        Debug.Log("Turkey entered walk state");
     }
 
     void I_ActorState.OnExit(Transform actor)
     {
-        Debug.Log("Santa exited walk state");
-        //actor.GetComponent<Transform>().localScale = new Vector3(1, 1);
+        Debug.Log("Turkey exited walk state");
     }
 
     I_ActorState I_ActorState.Update(Transform actor, float dt)
@@ -24,11 +25,11 @@ public class Turkey_WalkState : I_ActorState
     {
         if (Input.GetMouseButtonDown(0))
         {
-            return new Santa_PunchState();
+            return new Turkey_HitState();
         }
-        else if (!Input.GetKey(KeyCode.A) && !Input.GetKey(KeyCode.D))
+        else if (!Input.GetKey(left) && !Input.GetKey(right))
         {
-            return new Santa_IdleState();
+            return new Turkey_IdleState();
         }
         else
         {
@@ -52,12 +53,12 @@ public class Turkey_WalkState : I_ActorState
         Transform trans = actor.GetComponent<Transform>();
         Vector3 moveDir = new Vector3();
 
-        if (Input.GetKey(KeyCode.A))
+        if (Input.GetKey(left))
         {
             moveDir.x = -0.1f;
             actor.localScale = new Vector3(-1, 1);
         }
-        else if (Input.GetKey(KeyCode.D))
+        else if (Input.GetKey(right))
         {
             moveDir.x = 0.1f;
             actor.localScale = new Vector3(1, 1);

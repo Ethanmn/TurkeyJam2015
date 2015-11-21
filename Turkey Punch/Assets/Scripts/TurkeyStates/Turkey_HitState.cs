@@ -5,17 +5,18 @@ public class Turkey_HitState : I_ActorState
 {
     void I_ActorState.OnEnter(Transform actor)
     {
-        Debug.Log("Santa entered hit state");
+        Debug.Log("Turkey entered hit state");
+        actor.GetComponentInChildren<ParticleSystem>().Play();
     }
 
     void I_ActorState.OnExit(Transform actor)
     {
-        Debug.Log("Santa exited hit state");
+        Debug.Log("Turkey exited hit state");
     }
 
     I_ActorState I_ActorState.Update(Transform actor, float dt)
     {
-        return new Santa_IdleState();
+        return new Turkey_IdleState();
     }
 
     I_ActorState I_ActorState.HandleInput(Transform actor)

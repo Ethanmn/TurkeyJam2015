@@ -5,14 +5,14 @@ public class Turkey_PunchState : I_ActorState
 {
     void I_ActorState.OnEnter(Transform actor)
     {
-        Debug.Log("Santa entered punch state");
+        Debug.Log("Turkey entered punch state");
         SpriteRenderer sr = actor.GetComponent<SpriteRenderer>();
         sr.color = new Color(sr.color.b, sr.color.r, sr.color.g, (sr.color.a > 0) ? 0 : 1);
     }
 
     void I_ActorState.OnExit(Transform actor)
     {
-        Debug.Log("Santa exited punch state");
+        Debug.Log("Turkey exited punch state");
     }
 
     I_ActorState I_ActorState.Update(Transform actor, float dt)

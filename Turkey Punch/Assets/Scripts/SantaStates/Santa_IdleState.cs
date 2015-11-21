@@ -26,10 +26,10 @@ public class Santa_IdleState : I_ActorState
     {
         if (Input.GetMouseButton(0))
         {
-            return new Santa_PunchState();
+            return new Santa_HitState();
         }
 
-        if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.D))
+        if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D))
         {
             return new Santa_WalkState();
         }

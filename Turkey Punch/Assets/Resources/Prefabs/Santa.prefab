@@ -9,8 +9,8 @@ GameObject:
   m_Component:
   - 4: {fileID: 443784}
   - 212: {fileID: 21265470}
-  - 114: {fileID: 11423886}
   - 95: {fileID: 9544906}
+  - 114: {fileID: 11423886}
   m_Layer: 0
   m_Name: Santa
   m_TagString: Untagged
