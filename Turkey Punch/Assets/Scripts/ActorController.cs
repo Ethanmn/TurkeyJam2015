@@ -54,7 +54,6 @@ public class ActorController : MonoBehaviour
     {
         state.OnExit(transform);
         state = newState;
-        state.OnEnter(transform);
     }
 
     /// <summary>
