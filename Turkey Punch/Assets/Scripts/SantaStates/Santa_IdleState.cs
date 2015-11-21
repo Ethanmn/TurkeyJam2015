@@ -33,12 +33,14 @@ public class Santa_IdleState : I_ActorState
 
     I_ActorState I_ActorState.HandleInput(Transform actor)
     {
-        if (Input.GetKey(KeyCode.F))
+        ActorController ac = actor.GetComponent<ActorController>();
+
+        if (Input.GetKeyDown(ac.ATTACK1))
         {
             return new Santa_PunchState();
         }
 
-        if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.D))
+        if (Input.GetKeyDown(ac.LEFT) || Input.GetKeyDown(ac.RIGHT))
         {
             return new Santa_WalkState();
         }

@@ -3,7 +3,17 @@ using UnityEngine.UI;
 
 public class ActorController : MonoBehaviour
 {
-    //private HeroStats stats; CHARACTER STATS
+    protected KeyCode left;
+    public KeyCode LEFT { get { return left; } }
+
+    protected KeyCode right;
+    public KeyCode RIGHT { get { return right; } }
+
+    protected KeyCode jump;
+    public KeyCode JUMP { get { return jump; } }
+
+    protected KeyCode attack1;
+    public KeyCode ATTACK1 { get { return attack1; } }
 
     // State the character starts in
     protected I_ActorState startState;

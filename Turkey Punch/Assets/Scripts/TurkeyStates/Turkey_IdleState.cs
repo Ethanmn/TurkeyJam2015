@@ -24,13 +24,14 @@ public class Turkey_IdleState : I_ActorState
 
     I_ActorState I_ActorState.HandleInput(Transform actor)
     {
-        
-        if (Input.GetKey(KeyCode.H))
+        ActorController ac = actor.GetComponent<ActorController>();
+
+        if (Input.GetKey(ac.ATTACK1))
         {
             return new Turkey_PunchState();
         }
 
-        if (Input.GetKey(KeyCode.J) || Input.GetKey(KeyCode.L))
+        if (Input.GetKeyDown(ac.LEFT) || Input.GetKeyDown(ac.RIGHT))
         {
             return new Turkey_WalkState();
         }
