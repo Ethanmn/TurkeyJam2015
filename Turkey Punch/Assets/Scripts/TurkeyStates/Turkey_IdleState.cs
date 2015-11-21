@@ -30,7 +30,7 @@ public class Turkey_IdleState : I_ActorState
             return new Turkey_PunchState();
         }
 
-        if (Input.GetKeyDown(KeyCode.J) || Input.GetKeyDown(KeyCode.L))
+        if (Input.GetKey(KeyCode.J) || Input.GetKey(KeyCode.L))
         {
             return new Turkey_WalkState();
         }
