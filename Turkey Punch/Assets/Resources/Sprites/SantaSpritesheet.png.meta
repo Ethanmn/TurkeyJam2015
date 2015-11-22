@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 52011fb3f3ad9dd4682217849cb2e857
-timeCreated: 1448175472
+timeCreated: 1448175993
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -33,6 +33,8 @@ TextureImporter:
     21300052: SantaSpritesheet_26
     21300054: SantaSpritesheet_27
     21300056: SantaSpritesheet_28
+    21300058: SantaSpritesheet_29
+    21300060: SantaSpritesheet_30
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -83,7 +85,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 1400
+        y: 1750
         width: 350
         height: 350
       alignment: 0
@@ -93,7 +95,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 350
-        y: 1400
+        y: 1750
         width: 350
         height: 350
       alignment: 0
@@ -103,7 +105,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 700
-        y: 1400
+        y: 1750
         width: 350
         height: 350
       alignment: 0
@@ -113,7 +115,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1050
-        y: 1400
+        y: 1750
         width: 350
         height: 350
       alignment: 0
@@ -123,7 +125,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1400
-        y: 1400
+        y: 1750
         width: 350
         height: 350
       alignment: 0
@@ -133,7 +135,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1750
-        y: 1400
+        y: 1750
         width: 350
         height: 350
       alignment: 0
@@ -143,7 +145,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 1050
+        y: 1400
         width: 350
         height: 350
       alignment: 0
@@ -153,7 +155,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 350
-        y: 1050
+        y: 1400
         width: 350
         height: 350
       alignment: 0
@@ -163,7 +165,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 700
-        y: 1050
+        y: 1400
         width: 350
         height: 350
       alignment: 0
@@ -173,7 +175,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1050
-        y: 1050
+        y: 1400
         width: 350
         height: 350
       alignment: 0
@@ -183,7 +185,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1400
-        y: 1050
+        y: 1400
         width: 350
         height: 350
       alignment: 0
@@ -193,7 +195,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1750
-        y: 1050
+        y: 1400
         width: 350
         height: 350
       alignment: 0
@@ -203,7 +205,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 700
+        y: 1050
         width: 350
         height: 350
       alignment: 0
@@ -213,7 +215,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 350
-        y: 700
+        y: 1050
         width: 350
         height: 350
       alignment: 0
@@ -223,7 +225,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 700
-        y: 700
+        y: 1050
         width: 350
         height: 350
       alignment: 0
@@ -233,7 +235,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1050
-        y: 700
+        y: 1050
         width: 350
         height: 350
       alignment: 0
@@ -243,7 +245,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1400
-        y: 700
+        y: 1050
         width: 350
         height: 350
       alignment: 0
@@ -253,7 +255,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1750
-        y: 700
+        y: 1050
         width: 350
         height: 350
       alignment: 0
@@ -263,7 +265,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 350
+        y: 700
         width: 350
         height: 350
       alignment: 0
@@ -273,7 +275,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 350
-        y: 350
+        y: 700
         width: 350
         height: 350
       alignment: 0
@@ -283,7 +285,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 700
-        y: 350
+        y: 700
         width: 350
         height: 350
       alignment: 0
@@ -293,7 +295,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1050
-        y: 350
+        y: 700
         width: 350
         height: 350
       alignment: 0
@@ -303,7 +305,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1400
-        y: 350
+        y: 700
         width: 350
         height: 350
       alignment: 0
@@ -313,7 +315,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1750
-        y: 350
+        y: 700
         width: 350
         height: 350
       alignment: 0
@@ -323,7 +325,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
+        y: 350
         width: 350
         height: 350
       alignment: 0
@@ -333,7 +335,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 350
-        y: 0
+        y: 350
         width: 350
         height: 350
       alignment: 0
@@ -343,7 +345,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 700
-        y: 0
+        y: 350
         width: 350
         height: 350
       alignment: 0
@@ -353,7 +355,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1050
-        y: 0
+        y: 350
         width: 350
         height: 350
       alignment: 0
@@ -363,6 +365,26 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1400
+        y: 350
+        width: 350
+        height: 350
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SantaSpritesheet_29
+      rect:
+        serializedVersion: 2
+        x: 1750
+        y: 350
+        width: 350
+        height: 350
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SantaSpritesheet_30
+      rect:
+        serializedVersion: 2
+        x: 0
         y: 0
         width: 350
         height: 350
