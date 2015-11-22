@@ -3,8 +3,6 @@ using UnityEngine;
 
 public class Turkey_WalkState : I_ActorState
 {
-    static float maxSpeed = 0.1f;
-
     void I_ActorState.OnEnter(Transform actor)
     {
         Debug.Log("Turkey entered walk state");
@@ -56,24 +54,18 @@ public class Turkey_WalkState : I_ActorState
         Transform trans = actor.GetComponent<Transform>();
         Vector3 moveDir = new Vector3();
 
-        Vector3 leftFace = new Vector3(-1, 1);
-        Vector3 rightFace = new Vector3(1, 1);
-
         if (Input.GetKey(ac.LEFT))
         {
-            moveDir.x = -maxSpeed;
+            moveDir.x = -0.1f;
+            actor.localScale = new Vector3(-1, 1);
         }
         else if (Input.GetKey(ac.RIGHT))
         {
-            moveDir.x = maxSpeed;
+            moveDir.x = 0.1f;
+            actor.localScale = new Vector3(1, 1);
         }
 
         actor.GetComponent<Animator>().SetFloat("MoveSpeed", Math.Abs(moveDir.x));
-
-        if (actor.transform.localPosition.x > GameObject.FindGameObjectWithTag("Santa").GetComponent<Transform>().localPosition.x)
-            actor.localScale = leftFace;
-        else
-            actor.localScale = rightFace;
 
         trans.Translate(moveDir);
     }

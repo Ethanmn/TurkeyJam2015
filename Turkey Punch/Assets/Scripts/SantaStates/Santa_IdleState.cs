@@ -23,14 +23,11 @@ public class Santa_IdleState : I_ActorState
 
     I_ActorState I_ActorState.Update(Transform actor, float dt)
     {
-        Vector3 leftFace = new Vector3(-1, 1);
-        Vector3 rightFace = new Vector3(1, 1);
-
-        if (actor.transform.localPosition.x > GameObject.FindGameObjectWithTag("Turkey").GetComponent<Transform>().localPosition.x)
-            actor.localScale = leftFace;
-        else
-            actor.localScale = rightFace;
-
+        /*
+        Transform trans = actor.GetComponent<Transform>();
+        float time = Time.time;
+        trans.localPosition = new Vector3(Mathf.Sin(time), Mathf.Cos(time));
+        */
         return null;
     }
 
