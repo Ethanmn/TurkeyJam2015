@@ -180,6 +180,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 174486004}
   - 82: {fileID: 174486003}
+  - 114: {fileID: 174486005}
   m_Layer: 0
   m_Name: Music
   m_TagString: Untagged
@@ -196,7 +197,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: c4f9f9ef8fe0e1347947c3f31cd6df7e, type: 3}
+  m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -269,6 +270,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
+--- !u!114 &174486005
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 174486002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 836f8eb6c00128b4d9502fe48e785a69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &274439136
 GameObject:
   m_ObjectHideFlags: 0

@@ -5,7 +5,7 @@ class Santa_DeathState : I_ActorState
 {
     public void OnEnter(Transform actor)
     {
-        actor.GetComponents<AudioSource>()[0].Play();
+        actor.GetComponents<AudioSource>()[1].Play();
         Debug.Log("Santa is dead :(");
         actor.GetComponent<Animator>().SetBool("IsDead", true);
     }
