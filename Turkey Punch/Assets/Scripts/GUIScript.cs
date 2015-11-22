@@ -3,7 +3,8 @@ using UnityEngine.UI;
 
 public class GUIScript : MonoBehaviour
 {
-    Text timerText, countdownTimerText; // the text drawn to the screen
+    Text timerText, mainDisplayText; // the text drawn to the screen
+    private string toDisplay = "";
     private readonly int START_TIMER_VAL = 90, COUNTDOWN_TIMER_VAL = 4; // the initial timer conditions NOTE: countdownTimerVal should be 1 greater than desired value.
     private bool gameOn = false; // start the game immediately: true, start after countdown timer: false
     private bool countdownTimerRunning = true;
@@ -17,13 +18,10 @@ public class GUIScript : MonoBehaviour
     {
         timer = START_TIMER_VAL; // initialize timer value
         timerText = gameObject.GetComponentsInChildren<Text>()[1]; // initialize timer's text (NOTE: value may change based on ordering in gameobject)
-        countdownTimerText = gameObject.GetComponentsInChildren<Text>()[0]; // see line above
+        mainDisplayText = gameObject.GetComponentsInChildren<Text>()[0]; // see line above
 
         player1 = GameObject.FindGameObjectWithTag("Santa");
         player2 = GameObject.FindGameObjectWithTag("Turkey");
-
-        print("Santa " + player1);
-        print("Turkey " + player2);
 
         player1Stats = player1.GetComponent<ActorStats>();
         player2Stats = player2.GetComponent<ActorStats>();
@@ -45,6 +43,13 @@ public class GUIScript : MonoBehaviour
 
         /* draw and update timer */
         TimerUpdate();
+
+        MainDisplay(toDisplay);
+    }
+
+    private void MainDisplay(string s)
+    {
+        mainDisplayText.text = s;
     }
 
     /* this function draws the timer to the screen */
@@ -53,25 +58,26 @@ public class GUIScript : MonoBehaviour
         if (!gameOn) // countdown timer should be running (game timer should not)
         {
             if (countdownTimerRunning) countdownTimer = COUNTDOWN_TIMER_VAL - (int)Time.timeSinceLevelLoad; // updates the countdown timer's value
-            if (countdownTimer > 1) countdownTimerText.text = (countdownTimer - 1).ToString(); // updates countdown timer's text
-            else if (countdownTimer == 1) {
-                countdownTimerText.text = "FIGHT!";
-                countdownTimer = 0;
+            if (countdownTimer > 1) toDisplay = (countdownTimer - 1).ToString(); // updates countdown timer's text
+            else if (countdownTimer == 1) toDisplay = "Fight!";
+            else if (countdownTimer == 0)
+            {
+                toDisplay = "";
                 countdownTimerRunning = false;
+                gameOn = true;
             }
-            else if (countdownTimer <= -1) countdownTimerText.text = "TIME'S UP!";
-            else {
-                gameOn = true; // when countdown timer is finished, starts the games
-                countdownTimerText.text = ""; // not nullifying the text string will keep displaying text to the screen. keep this null.
-            }
+            else if (countdownTimer == -1000) { } // dontask.jpg...
+            else if (countdownTimer <= -1) gameOn = true; // when countdown timer is finished, starts the games
         }
         else // countdown timer is finished counting down.
         {
             timer = START_TIMER_VAL - (int)Time.timeSinceLevelLoad + COUNTDOWN_TIMER_VAL; // updates timer
             if (timer <= 0)
             {
+                toDisplay = "Time's up!";
                 GameOver(0); // checks each players health and makes a verdict on who won based on that
-                countdownTimer = -1; // displays "TIME'S UP!" to the screen
+                countdownTimer = -1000;
+
             }
         }
         timerText.text = timer.ToString();
@@ -80,22 +86,22 @@ public class GUIScript : MonoBehaviour
     public void GameOver(int player)
     {
         gameOn = false;
-        countdownTimer = 0;
+        countdownTimer = -1000;
         switch (player)
         {
             case 0:
                 if (player1Stats.CurrentHealth > player2Stats.CurrentHealth)
-                    countdownTimerText.text = "Player 1 wins!";
+                    toDisplay = "Player 1\nwins!";
                 else if (player2Stats.CurrentHealth > player1Stats.CurrentHealth)
-                    countdownTimerText.text = "Player 2 wins!";
+                    toDisplay = "Player 2\nwins!";
                 else
-                    countdownTimerText.text = "It's a tie!";
+                    toDisplay = "It's a tie!";
                 break;
             case 1:
-                countdownTimerText.text = "Player 1 wins!";
+                toDisplay = "Player 1\nwins!";
                 break;
             case 2:
-                countdownTimerText.text = "Player 2 wins!";
+                toDisplay = "Player 2\nwins!";
                 break;
         }
     }
