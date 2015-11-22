@@ -6,6 +6,7 @@ class Santa_DeathState : I_ActorState
     public void OnEnter(Transform actor)
     {
         Debug.Log("Santa is dead :(");
+        actor.GetComponent<Animator>().SetBool("IsDead", true);
     }
 
     public void OnExit(Transform actor)

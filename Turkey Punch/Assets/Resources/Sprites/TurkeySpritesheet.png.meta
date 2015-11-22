@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 00d89d61cb90d0548bbd7cc1ffe618ed
-timeCreated: 1448150626
+timeCreated: 1448158751
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -20,6 +20,43 @@ TextureImporter:
     21300026: TurkeySpritesheet_13
     21300028: TurkeySpritesheet_14
     21300030: TurkeySpritesheet_15
+    21300032: TurkeySpritesheet_16
+    21300034: TurkeySpritesheet_17
+    21300036: TurkeySpritesheet_18
+    21300038: TurkeySpritesheet_19
+    21300040: TurkeySpritesheet_20
+    21300042: TurkeySpritesheet_21
+    21300044: TurkeySpritesheet_22
+    21300046: TurkeySpritesheet_23
+    21300048: TurkeySpritesheet_24
+    21300050: TurkeySpritesheet_25
+    21300052: TurkeySpritesheet_26
+    21300054: TurkeySpritesheet_27
+    21300056: TurkeySpritesheet_28
+    21300058: TurkeySpritesheet_29
+    21300060: TurkeySpritesheet_30
+    21300062: TurkeySpritesheet_31
+    21300064: TurkeySpritesheet_32
+    21300066: TurkeySpritesheet_33
+    21300068: TurkeySpritesheet_34
+    21300070: TurkeySpritesheet_35
+    21300072: TurkeySpritesheet_36
+    21300074: TurkeySpritesheet_37
+    21300076: TurkeySpritesheet_38
+    21300078: TurkeySpritesheet_39
+    21300080: TurkeySpritesheet_40
+    21300082: TurkeySpritesheet_41
+    21300084: TurkeySpritesheet_42
+    21300086: TurkeySpritesheet_43
+    21300088: TurkeySpritesheet_44
+    21300090: TurkeySpritesheet_45
+    21300092: TurkeySpritesheet_46
+    21300094: TurkeySpritesheet_47
+    21300096: TurkeySpritesheet_48
+    21300098: TurkeySpritesheet_49
+    21300100: TurkeySpritesheet_50
+    21300102: TurkeySpritesheet_51
+    21300104: TurkeySpritesheet_52
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -70,49 +107,49 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 672
-        width: 336
-        height: 336
+        y: 2800
+        width: 350
+        height: 350
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: TurkeySpritesheet_1
       rect:
         serializedVersion: 2
-        x: 336
-        y: 672
-        width: 336
-        height: 336
+        x: 350
+        y: 2800
+        width: 350
+        height: 350
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: TurkeySpritesheet_2
       rect:
         serializedVersion: 2
-        x: 672
-        y: 672
-        width: 336
-        height: 336
+        x: 700
+        y: 2800
+        width: 350
+        height: 350
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: TurkeySpritesheet_3
       rect:
         serializedVersion: 2
-        x: 1008
-        y: 672
-        width: 336
-        height: 336
+        x: 1050
+        y: 2800
+        width: 350
+        height: 350
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: TurkeySpritesheet_4
       rect:
         serializedVersion: 2
-        x: 1344
-        y: 672
-        width: 336
-        height: 336
+        x: 1400
+        y: 2800
+        width: 350
+        height: 350
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -120,59 +157,59 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 336
-        width: 336
-        height: 336
+        y: 2450
+        width: 350
+        height: 350
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: TurkeySpritesheet_6
       rect:
         serializedVersion: 2
-        x: 336
-        y: 336
-        width: 336
-        height: 336
+        x: 350
+        y: 2450
+        width: 350
+        height: 350
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: TurkeySpritesheet_7
       rect:
         serializedVersion: 2
-        x: 672
-        y: 336
-        width: 336
-        height: 336
+        x: 700
+        y: 2450
+        width: 350
+        height: 350
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: TurkeySpritesheet_8
       rect:
         serializedVersion: 2
-        x: 1008
-        y: 336
-        width: 336
-        height: 336
+        x: 1050
+        y: 2450
+        width: 350
+        height: 350
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: TurkeySpritesheet_9
       rect:
         serializedVersion: 2
-        x: 1344
-        y: 336
-        width: 336
-        height: 336
+        x: 1400
+        y: 2450
+        width: 350
+        height: 350
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: TurkeySpritesheet_10
       rect:
         serializedVersion: 2
-        x: 1680
-        y: 336
-        width: 336
-        height: 336
+        x: 1750
+        y: 2450
+        width: 350
+        height: 350
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -180,49 +217,369 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 336
-        height: 336
+        y: 2100
+        width: 350
+        height: 350
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: TurkeySpritesheet_12
       rect:
         serializedVersion: 2
-        x: 336
-        y: 0
-        width: 336
-        height: 336
+        x: 350
+        y: 2100
+        width: 350
+        height: 350
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: TurkeySpritesheet_13
       rect:
         serializedVersion: 2
-        x: 672
-        y: 0
-        width: 336
-        height: 336
+        x: 700
+        y: 2100
+        width: 350
+        height: 350
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: TurkeySpritesheet_14
       rect:
         serializedVersion: 2
-        x: 1008
-        y: 0
-        width: 336
-        height: 336
+        x: 1050
+        y: 2100
+        width: 350
+        height: 350
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: TurkeySpritesheet_15
       rect:
         serializedVersion: 2
-        x: 1344
+        x: 1400
+        y: 2100
+        width: 350
+        height: 350
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: TurkeySpritesheet_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1750
+        width: 350
+        height: 350
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: TurkeySpritesheet_17
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 1750
+        width: 350
+        height: 350
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: TurkeySpritesheet_18
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 1750
+        width: 350
+        height: 350
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: TurkeySpritesheet_19
+      rect:
+        serializedVersion: 2
+        x: 1050
+        y: 1750
+        width: 350
+        height: 350
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: TurkeySpritesheet_20
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 1750
+        width: 350
+        height: 350
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: TurkeySpritesheet_21
+      rect:
+        serializedVersion: 2
+        x: 1750
+        y: 1750
+        width: 350
+        height: 350
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: TurkeySpritesheet_22
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1400
+        width: 350
+        height: 350
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: TurkeySpritesheet_23
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 1400
+        width: 350
+        height: 350
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: TurkeySpritesheet_24
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 1400
+        width: 350
+        height: 350
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: TurkeySpritesheet_25
+      rect:
+        serializedVersion: 2
+        x: 1050
+        y: 1400
+        width: 350
+        height: 350
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: TurkeySpritesheet_26
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 1400
+        width: 350
+        height: 350
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: TurkeySpritesheet_27
+      rect:
+        serializedVersion: 2
+        x: 1750
+        y: 1400
+        width: 350
+        height: 350
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: TurkeySpritesheet_28
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1050
+        width: 350
+        height: 350
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: TurkeySpritesheet_29
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 1050
+        width: 350
+        height: 350
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: TurkeySpritesheet_30
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 1050
+        width: 350
+        height: 350
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: TurkeySpritesheet_31
+      rect:
+        serializedVersion: 2
+        x: 1050
+        y: 1050
+        width: 350
+        height: 350
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: TurkeySpritesheet_32
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 1050
+        width: 350
+        height: 350
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: TurkeySpritesheet_33
+      rect:
+        serializedVersion: 2
+        x: 1750
+        y: 1050
+        width: 350
+        height: 350
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: TurkeySpritesheet_34
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 700
+        width: 350
+        height: 350
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: TurkeySpritesheet_35
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 700
+        width: 350
+        height: 350
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: TurkeySpritesheet_36
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 700
+        width: 350
+        height: 350
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: TurkeySpritesheet_37
+      rect:
+        serializedVersion: 2
+        x: 1050
+        y: 700
+        width: 350
+        height: 350
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: TurkeySpritesheet_38
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 700
+        width: 350
+        height: 350
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: TurkeySpritesheet_39
+      rect:
+        serializedVersion: 2
+        x: 1750
+        y: 700
+        width: 350
+        height: 350
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: TurkeySpritesheet_40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 350
+        width: 350
+        height: 350
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: TurkeySpritesheet_41
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 350
+        width: 350
+        height: 350
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: TurkeySpritesheet_42
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 350
+        width: 350
+        height: 350
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: TurkeySpritesheet_43
+      rect:
+        serializedVersion: 2
+        x: 1050
+        y: 350
+        width: 350
+        height: 350
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: TurkeySpritesheet_44
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 350
+        width: 350
+        height: 350
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: TurkeySpritesheet_45
+      rect:
+        serializedVersion: 2
+        x: 1750
+        y: 350
+        width: 350
+        height: 350
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: TurkeySpritesheet_46
+      rect:
+        serializedVersion: 2
+        x: 0
         y: 0
-        width: 336
-        height: 336
+        width: 350
+        height: 350
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: TurkeySpritesheet_47
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 0
+        width: 350
+        height: 350
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
