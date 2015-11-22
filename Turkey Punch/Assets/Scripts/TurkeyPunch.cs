@@ -13,7 +13,7 @@ public class TurkeyPunch : MonoBehaviour {
         {
             Debug.Log("HIT THE TURKEY!");
             // Hit the Turkey
-            col.GetComponentInParent<ActorController>().SetState(new Turkey_HitState());
+            col.GetComponentInParent<ActorController>().SetState(new Turkey_HitState(5));
         }
 
         // If the other hit box is Santa's hitbox
@@ -21,7 +21,7 @@ public class TurkeyPunch : MonoBehaviour {
         {
             Debug.Log("HIT THE SANTA! " + col.transform.parent.name);
             // Hit the Santa
-            col.GetComponentInParent<ActorController>().SetState(new Santa_HitState());
+            col.GetComponentInParent<ActorController>().SetState(new Santa_HitState(5));
         }
     }
 }

@@ -7,7 +7,7 @@ public class Santa_SpecialState : I_ActorState
     private float timer;
 
     // Attack Time
-    private float attackTime = 0.6f;
+    private float attackTime = 2.5f;
 
     void I_ActorState.OnEnter(Transform actor)
     {
@@ -21,6 +21,9 @@ public class Santa_SpecialState : I_ActorState
         actor.GetComponent<ActorStats>().SpecialCharge = 0;
 
         actor.gameObject.GetComponent<SpriteRenderer>().sortingOrder = 1;
+
+        // Summon the SLAY
+        GameObject.Instantiate<GameObject>(Resources.Load<GameObject>("Prefabs/Slay"));
 
         // Enable the hit box so it can hit things
         //actor.FindChild("SpecialHitBox").GetComponent<BoxCollider2D>().enabled = true;
