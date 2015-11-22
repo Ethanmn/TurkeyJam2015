@@ -33,8 +33,6 @@ public class GUIScript : MonoBehaviour
 
     public void Update()
     {
-        /* TO DO: Implement these functions on hitbox collisions. */
-
         transform.FindChild("P1HealthBar").transform.localScale = new Vector3(player1Stats.CurrentHealth / 100f, 1, 1);
         if (player1Stats.isDead())
         {
