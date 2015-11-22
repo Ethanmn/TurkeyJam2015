@@ -16,4 +16,13 @@ public class ChangeScene : MonoBehaviour {
         }
 	}
 
+	public void ExitGame() {
+		Application.Quit ();
+	}
+
+	void Update() {
+		if (Input.GetKey("escape"))
+			Application.Quit();
+		
+	}
 }
