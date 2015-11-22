@@ -6,6 +6,10 @@ TagManager:
   tags:
   - Santa
   - Turkey
+  - P1HealthBar
+  - P2HealthBar
+  - AnnouncerText
+  - TimerText
   layers:
   - Default
   - TransparentFX

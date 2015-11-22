@@ -445,6 +445,7 @@ GameObject:
   - 114: {fileID: 1274727929}
   - 114: {fileID: 1274727928}
   - 114: {fileID: 1274727927}
+  - 114: {fileID: 1274727931}
   m_Layer: 5
   m_Name: GUICanvas
   m_TagString: Untagged
@@ -475,13 +476,12 @@ RectTransform:
 --- !u!114 &1274727927
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11467454, guid: 03336cacf686cd74fb7997cb8cdc5d09,
-    type: 2}
+  m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1274727925}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e2cced9aae8d7e849ab2da32e1e06453, type: 3}
+  m_Script: {fileID: 11500000, guid: 931302210730efc49be91bdc3bcb2cd1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &1274727928
@@ -541,6 +541,17 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
+--- !u!114 &1274727931
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1274727925}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5be361f286a7dcf4894bcee8f21630a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1366537648
 GameObject:
   m_ObjectHideFlags: 0
@@ -553,7 +564,7 @@ GameObject:
   - 114: {fileID: 1366537650}
   m_Layer: 5
   m_Name: P2HealthBar
-  m_TagString: Untagged
+  m_TagString: P2HealthBar
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -622,8 +633,8 @@ GameObject:
   - 222: {fileID: 1760804223}
   - 114: {fileID: 1760804222}
   m_Layer: 5
-  m_Name: CountdownTimerText
-  m_TagString: Untagged
+  m_Name: AnnouncerText
+  m_TagString: AnnouncerText
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -698,7 +709,7 @@ GameObject:
   - 114: {fileID: 1779435388}
   m_Layer: 5
   m_Name: P1HealthBar
-  m_TagString: Untagged
+  m_TagString: P1HealthBar
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -810,7 +821,7 @@ GameObject:
   - 114: {fileID: 2032735443}
   m_Layer: 5
   m_Name: TimerText
-  m_TagString: Untagged
+  m_TagString: TimerText
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
