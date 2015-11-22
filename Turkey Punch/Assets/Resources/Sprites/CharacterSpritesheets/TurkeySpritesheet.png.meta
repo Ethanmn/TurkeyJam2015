@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 00d89d61cb90d0548bbd7cc1ffe618ed
-timeCreated: 1448175456
+timeCreated: 1448191410
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -61,6 +61,7 @@ TextureImporter:
     21300108: TurkeySpritesheet_54
     21300110: TurkeySpritesheet_55
     21300112: TurkeySpritesheet_56
+    21300114: TurkeySpritesheet_57
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -671,6 +672,16 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1400
+        y: 0
+        width: 350
+        height: 350
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: TurkeySpritesheet_57
+      rect:
+        serializedVersion: 2
+        x: 1750
         y: 0
         width: 350
         height: 350
