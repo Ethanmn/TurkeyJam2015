@@ -13,7 +13,7 @@ PlayerSettings:
   companyName: DefaultCompany
   productName: Turkey Punch
   defaultCursor: {fileID: 0}
-  cursorHotspot: {x: 0, y: 0}
+  cursorHotspot: {x: -2.04508908e-08, y: -3.89235172e-24}
   m_ShowUnitySplashScreen: 1
   defaultScreenWidth: 1024
   defaultScreenHeight: 768
@@ -92,7 +92,15 @@ PlayerSettings:
   metroEnableLowLatencyPresentationAPI: 0
   xboxOneDisableKinectGpuReservation: 0
   virtualRealitySupported: 0
+<<<<<<< HEAD
   productGUID: 68673d3d9d47acf438aeef7eb53ec672
+=======
+<<<<<<< HEAD
+  productGUID: b5793330d24732c4286701610177d7fe
+=======
+  productGUID: 09b93d3052a2c5f4eaf5f4fd93df670f
+>>>>>>> origin/master
+>>>>>>> 88a2691ca8f25c43293fba141f09c48884a5ddeb
   AndroidBundleVersionCode: 1
   AndroidMinSdkVersion: 9
   AndroidPreferredInstallLocation: 1
@@ -133,7 +141,7 @@ PlayerSettings:
   iOSLaunchScreenLandscape: {fileID: 0}
   iOSLaunchScreenBackgroundColor:
     serializedVersion: 2
-    rgba: 0
+    rgba: 3839941372
   iOSLaunchScreenFillPct: 100
   iOSLaunchScreenSize: 100
   iOSLaunchScreenCustomXibPath: 
@@ -434,12 +442,39 @@ PlayerSettings:
   XboxOneAllowedProductIds: []
   XboxOnePersistentLocalStorageSize: 0
   intPropertyNames:
+<<<<<<< HEAD
   - WebPlayer::ScriptingBackend
   WebPlayer::ScriptingBackend: 0
+=======
+  - Metro::ScriptingBackend
+  - WP8::ScriptingBackend
+  - WebGL::ScriptingBackend
+  - WebGL::audioCompressionFormat
+  - WebGL::exceptionSupport
+  - WebGL::memorySize
+  - iOS::Architecture
+  - iOS::ScriptingBackend
+  Metro::ScriptingBackend: 2
+  WP8::ScriptingBackend: 2
+  WebGL::ScriptingBackend: 1
+  WebGL::audioCompressionFormat: 4
+  WebGL::exceptionSupport: 1
+  WebGL::memorySize: 256
+  iOS::Architecture: 2
+  iOS::ScriptingBackend: 1
+>>>>>>> 88a2691ca8f25c43293fba141f09c48884a5ddeb
   boolPropertyNames:
   - XboxOne::enus
   XboxOne::enus: 1
+<<<<<<< HEAD
   stringPropertyNames: []
+=======
+  stringPropertyNames:
+  - WebGL::emscriptenArgs
+  - WebGL::template
+  WebGL::emscriptenArgs: 
+  WebGL::template: APPLICATION:Default
+>>>>>>> 88a2691ca8f25c43293fba141f09c48884a5ddeb
   firstStreamedSceneWithResources: 0
   cloudProjectId: 
   projectName: 
