@@ -17,10 +17,13 @@ public class Turkey_SpecialState : I_ActorState
         // Reset the timer
         timer = 0;
 
+        // Reset the speical charge
+        actor.GetComponent<ActorStats>().SpecialCharge = 0;
+
         actor.gameObject.GetComponent<SpriteRenderer>().sortingOrder = 1;
 
         // Enable the hit box so it can hit things
-        actor.FindChild("SpecialHitBox").GetComponent<BoxCollider2D>().enabled = true;
+        //actor.FindChild("SpecialHitBox").GetComponent<BoxCollider2D>().enabled = true;
     }
 
     void I_ActorState.OnExit(Transform actor)
@@ -29,7 +32,7 @@ public class Turkey_SpecialState : I_ActorState
         actor.GetComponent<Animator>().SetBool("IsSpecial", false);
 
         // Dissable the hit box so it doesn't hit things
-        actor.FindChild("SpecialHitBox").GetComponent<BoxCollider2D>().enabled = false;
+        //actor.FindChild("SpecialHitBox").GetComponent<BoxCollider2D>().enabled = false;
     }
 
     I_ActorState I_ActorState.Update(Transform actor, float dt)
