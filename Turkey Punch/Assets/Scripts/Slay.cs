@@ -3,7 +3,7 @@ using System.Collections;
 
 public class Slay : MonoBehaviour {
     float timer = 0;
-    float time = 3f;
+    float time = 4f;
 
 	// Use this for initialization
 	void Start () {

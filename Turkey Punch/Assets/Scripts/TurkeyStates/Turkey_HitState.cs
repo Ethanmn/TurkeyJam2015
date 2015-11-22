@@ -13,17 +13,14 @@ public class Turkey_HitState : I_ActorState
 
     void I_ActorState.OnEnter(Transform actor)
     {
-        Debug.Log("Turkey entered hit state");
+        //Debug.Log("Turkey entered hit state");
         actor.GetComponent<Animator>().SetBool("IsHit", true);
         actor.GetComponentInChildren<ParticleSystem>().Play();
 
-<<<<<<< HEAD
         actor.GetComponent<AudioSource>().Play();
 
-        actor.GetComponent<ActorStats>().Hurt(5);
-=======
         actor.GetComponent<ActorStats>().Hurt(damage);
->>>>>>> origin/master
+
     }
 
     void I_ActorState.OnExit(Transform actor)
