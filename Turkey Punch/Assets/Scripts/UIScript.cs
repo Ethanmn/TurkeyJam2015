@@ -22,11 +22,13 @@ public class UIScript : MonoBehaviour
     public void Update() /* this method updates the health bars with respect to the each player's health stats */
     {
         UpdateHPBars();
+        print(player1Stats.SpecialCharge);
     }
 
     public void UpdateHPBars()
     {
         GameObject.FindGameObjectWithTag("P1HealthBar").GetComponent<Transform>().localScale = new Vector3(player1Stats.CurrentHealth / 100f, 1, 1);
         GameObject.FindGameObjectWithTag("P2HealthBar").GetComponent<Transform>().localScale = new Vector3(player2Stats.CurrentHealth / 100f, 1, 1);
+        
     }
 }

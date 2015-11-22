@@ -47,12 +47,12 @@ public class SceneController : MonoBehaviour {
                 else if (countdownTimer > 0)
                 {
                     ui.AnnouncerText.text = "FIGHT!";
+                    player1.GetComponent<ActorController>().enabled = true;
+                    player2.GetComponent<ActorController>().enabled = true;
                     nextState = currentState;
                 }
                 else
                 {
-                    player1.GetComponent<ActorController>().enabled = true;
-                    player2.GetComponent<ActorController>().enabled = true;
                     nextState = GameState.Fight;
                 }
                 break;
@@ -76,7 +76,18 @@ public class SceneController : MonoBehaviour {
                 if (gameTimer <= 0)
                     ui.AnnouncerText.text = "TIME'S UP";
                 else
+                {
                     ui.AnnouncerText.text = "K.O.";
+                    if (player1Stats.isDead())
+                    {
+                        player2.GetComponent<ActorController>().SetState(new Turkey_VictoryState());
+                    }
+                    else
+                    {
+                        player1.GetComponent<ActorController>().SetState(new Santa_VictoryState());
+
+                    }
+                }
                 nextState = currentState;
                 break;
         }
