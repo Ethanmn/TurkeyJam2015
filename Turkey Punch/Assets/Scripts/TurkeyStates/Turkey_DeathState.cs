@@ -5,6 +5,7 @@ class Turkey_DeathState : I_ActorState
 {
     public void OnEnter(Transform actor)
     {
+        actor.GetComponents<AudioSource>()[1].Play();
         Debug.Log("Turkey is dead :(");
         actor.GetComponent<Animator>().SetBool("IsDead", true);
     }

@@ -17,7 +17,7 @@ public class Turkey_HitState : I_ActorState
         actor.GetComponent<Animator>().SetBool("IsHit", true);
         actor.GetComponentInChildren<ParticleSystem>().Play();
 
-        actor.GetComponent<AudioSource>().Play();
+        actor.GetComponents<AudioSource>()[0].Play();
 
         actor.GetComponent<SpriteRenderer>().sortingOrder = 0;
 
