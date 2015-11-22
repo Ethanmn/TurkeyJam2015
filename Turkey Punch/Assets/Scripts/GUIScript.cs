@@ -3,15 +3,12 @@ using UnityEngine.UI;
 
 public class GUIScript : MonoBehaviour
 {
-    Text timerText;
-    Text countdownTimerText;
-    private readonly int START_TIMER_VAL = 90;
-    private readonly int COUNTDOWN_TIMER_VAL = 4;
+    Text timerText, countdownTimerText;
+    private readonly int START_TIMER_VAL = 90, COUNTDOWN_TIMER_VAL = 4;
     private bool gameOn = false;
 
     private GUIStyle guiStyle;
-    private int timer;
-    private int countdownTimer;
+    private int timer, countdownTimer;
 
     private GameObject player1, player2;
     private ActorStats player1Stats, player2Stats;
