@@ -11,6 +11,8 @@ TagManager:
   - AnnouncerText
   - TimerText
   - GUICanvas
+  - P1SpecialCharge
+  - P2SpecialCharge
   layers:
   - Default
   - TransparentFX
