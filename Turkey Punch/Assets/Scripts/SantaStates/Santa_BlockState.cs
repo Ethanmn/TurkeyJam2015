@@ -1,44 +1,46 @@
 ﻿using System;
 using UnityEngine;
 
-public class Turkey_PunchState : I_ActorState
+public class Santa_BlockState : I_ActorState
 {
+    // Timer to hold the animation
     private float timer;
 
-    // Punch Time
-    private float punchTime = 0.5f;
+    // Time to block
+    private float blockTime = 1f;
 
     void I_ActorState.OnEnter(Transform actor)
     {
-        //Debug.Log("Turkey entered punch state");
+        //Debug.Log("Santa entered punch state");
+
         // Set the animation flag
-        actor.GetComponent<Animator>().SetBool("IsPunching", true);
+        actor.GetComponent<Animator>().SetBool("IsBlocking", true);
 
         // Reset the timer
         timer = 0;
 
-        // Enable the hit box so it can hit things
-        actor.FindChild("PunchHitBox").GetComponent<BoxCollider2D>().enabled = true;
+        // Enable the block box so it can hit things
+        actor.FindChild("SantaHitBox").GetComponent<Collider2D>().enabled = false;
     }
 
     void I_ActorState.OnExit(Transform actor)
     {
-        //Debug.Log("Turkey exited punch state");
+        //Debug.Log("Santa exited punch state");
 
         // Set the animation flag
-        actor.GetComponent<Animator>().SetBool("IsPunching", false);
+        actor.GetComponent<Animator>().SetBool("IsBlocking", false);
 
-        // Dissable the hit box so it doesn't hit things
-        actor.FindChild("PunchHitBox").GetComponent<BoxCollider2D>().enabled = false;
+        // Dissable the block box so it doesn't hit things
+        actor.FindChild("SantaHitBox").GetComponent<Collider2D>().enabled = true;
     }
 
     I_ActorState I_ActorState.Update(Transform actor, float dt)
     {
-        // If attack animation is over
-        if (timer >= punchTime)
+        // If block animation is over
+        if (timer >= blockTime)
         {
             // Exit the state
-            return new Turkey_IdleState();
+            return new Santa_IdleState();
         }
         else
         {
@@ -47,6 +49,7 @@ public class Turkey_PunchState : I_ActorState
             // Stay in the state
             return null;
         }
+        
     }
 
     I_ActorState I_ActorState.HandleInput(Transform actor)

@@ -30,8 +30,11 @@ public class Turkey_IdleState : I_ActorState
         {
             return new Turkey_PunchState();
         }
-
-        if (Input.GetKey(ac.LEFT) || Input.GetKey(ac.RIGHT))
+        else if (Input.GetKey(ac.BLOCK))
+        {
+            return new Turkey_BlockState();
+        }
+        else if (Input.GetKey(ac.LEFT) || Input.GetKey(ac.RIGHT))
         {
             return new Turkey_WalkState();
         }

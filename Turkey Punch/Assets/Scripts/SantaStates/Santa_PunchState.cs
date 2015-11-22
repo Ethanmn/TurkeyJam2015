@@ -6,6 +6,9 @@ public class Santa_PunchState : I_ActorState
     // Timer to hold the animation
     private float timer;
 
+    // Punch Time
+    private float punchTime = 0.5f;
+
     void I_ActorState.OnEnter(Transform actor)
     {
         //Debug.Log("Santa entered punch state");
@@ -34,7 +37,7 @@ public class Santa_PunchState : I_ActorState
     I_ActorState I_ActorState.Update(Transform actor, float dt)
     {
         // If attack animation is over
-        if (timer >= 0.5)
+        if (timer >= punchTime)
         {
             // Exit the state
             return new Santa_IdleState();

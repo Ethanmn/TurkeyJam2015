@@ -70,6 +70,23 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &150604
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 450948}
+  - 50: {fileID: 5003634}
+  - 61: {fileID: 6134074}
+  m_Layer: 0
+  m_Name: BlockHitBox
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &182996
 GameObject:
   m_ObjectHideFlags: 0
@@ -95,7 +112,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 110264}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: -1.62920685e-07}
-  m_LocalPosition: {x: .109999895, y: -.879999876, z: 0}
+  m_LocalPosition: {x: .109999895, y: .170000002, z: 0}
   m_LocalScale: {x: -1, y: 1, z: 0}
   m_Children: []
   m_Father: {fileID: 443784}
@@ -126,8 +143,21 @@ Transform:
   - {fileID: 484452}
   - {fileID: 473876}
   - {fileID: 430284}
+  - {fileID: 450948}
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!4 &450948
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 150604}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: .790000021, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 443784}
+  m_RootOrder: 4
 --- !u!4 &473876
 Transform:
   m_ObjectHideFlags: 1
@@ -152,6 +182,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 443784}
   m_RootOrder: 1
+--- !u!50 &5003634
+Rigidbody2D:
+  serializedVersion: 2
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 150604}
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: .0500000007
+  m_GravityScale: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!50 &5085952
 Rigidbody2D:
   serializedVersion: 2
@@ -210,6 +256,19 @@ BoxCollider2D:
   m_Offset: {x: -.0108582973, y: -.049950242}
   serializedVersion: 2
   m_Size: {x: 1.02171755, y: .422326505}
+--- !u!61 &6134074
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 150604}
+  m_Enabled: 0
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: -5.96046448e-08, y: .301592588}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 2.02279472}
 --- !u!61 &6166606
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -439,7 +498,7 @@ ParticleSystem:
         rgba: 4294967295
       minMaxState: 0
     startSize:
-      scalar: .699999988
+      scalar: .300000012
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -505,8 +564,8 @@ ParticleSystem:
   ShapeModule:
     serializedVersion: 2
     enabled: 1
-    type: 11
-    radius: .800000012
+    type: 10
+    radius: .400000006
     angle: 25
     length: 5
     boxX: 1

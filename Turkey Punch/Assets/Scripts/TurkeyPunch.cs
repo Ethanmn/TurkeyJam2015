@@ -3,16 +3,6 @@ using System.Collections;
 
 public class TurkeyPunch : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
-
     // When the punch makes contact
     void OnTriggerEnter2D(Collider2D col)
     {
