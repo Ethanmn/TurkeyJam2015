@@ -23,5 +23,9 @@ public class TurkeyPunch : MonoBehaviour {
             // Hit the Santa
             col.GetComponentInParent<ActorController>().SetState(new Santa_HitState(5));
         }
+        else if (col.name == "BlockHitBox" && !(col.transform.parent == gameObject.transform.parent))
+        {
+            transform.parent.gameObject.GetComponent<ActorController>().SetState(new Turkey_HitState(0));
+        }
     }
 }

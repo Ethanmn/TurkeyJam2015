@@ -7,7 +7,10 @@ public class Santa_BlockState : I_ActorState
     private float timer;
 
     // Time to block
-    private float blockTime = 1f;
+    private float blockTime = 0.5f;
+
+    // Cooldown
+    private float cd = 0.5f;
 
     void I_ActorState.OnEnter(Transform actor)
     {
@@ -24,6 +27,7 @@ public class Santa_BlockState : I_ActorState
 
         // Enable the block box so it can hit things
         actor.FindChild("SantaHitBox").GetComponent<Collider2D>().enabled = false;
+        actor.FindChild("BlockHitBox").GetComponent<Collider2D>().enabled = true;
     }
 
     void I_ActorState.OnExit(Transform actor)
@@ -33,8 +37,11 @@ public class Santa_BlockState : I_ActorState
         // Set the animation flag
         actor.GetComponent<Animator>().SetBool("IsBlocking", false);
 
+        actor.GetComponent<ActorStats>().BlockCD = cd;
+
         // Dissable the block box so it doesn't hit things
         actor.FindChild("SantaHitBox").GetComponent<Collider2D>().enabled = true;
+        actor.FindChild("BlockHitBox").GetComponent<Collider2D>().enabled = false;
     }
 
     I_ActorState I_ActorState.Update(Transform actor, float dt)

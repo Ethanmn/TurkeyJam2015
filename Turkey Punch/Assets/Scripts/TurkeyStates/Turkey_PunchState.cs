@@ -7,7 +7,7 @@ public class Turkey_PunchState : I_ActorState
     private float timer;
 
     // Punch Time
-    private float punchTime = 0.6f;
+    private float punchTime = 0.7f;
 
     void I_ActorState.OnEnter(Transform actor)
     {

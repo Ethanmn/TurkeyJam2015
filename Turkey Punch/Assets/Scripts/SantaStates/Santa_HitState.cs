@@ -27,7 +27,7 @@ public class Santa_HitState : I_ActorState
 
     I_ActorState I_ActorState.Update(Transform actor, float dt)
     {
-        if (timer > 0.5f)
+        if (timer > 0.6f)
         {
             return new Santa_IdleState();
         }

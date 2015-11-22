@@ -46,7 +46,7 @@ public class Santa_IdleState : I_ActorState
             if (actor.GetComponent<ActorStats>().SpecialCharge >= 50)
                 return new Santa_SpecialState();
         }
-        else if (Input.GetKey(ac.BLOCK))
+        else if (Input.GetKey(ac.BLOCK) && actor.GetComponent<ActorStats>().BlockCD <= 0)
         {
             return new Santa_BlockState();
         }
