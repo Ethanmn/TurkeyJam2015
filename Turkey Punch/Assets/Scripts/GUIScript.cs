@@ -6,6 +6,7 @@ public class GUIScript : MonoBehaviour
     Text timerText, countdownTimerText; // the text drawn to the screen
     private readonly int START_TIMER_VAL = 90, COUNTDOWN_TIMER_VAL = 4; // the initial timer conditions NOTE: countdownTimerVal should be 1 greater than desired value.
     private bool gameOn = false; // start the game immediately: true, start after countdown timer: false
+    private bool countdownTimerRunning = true;
     
     private int timer, countdownTimer; 
 
@@ -51,9 +52,13 @@ public class GUIScript : MonoBehaviour
     {
         if (!gameOn) // countdown timer should be running (game timer should not)
         {
-            countdownTimer = COUNTDOWN_TIMER_VAL - (int)Time.timeSinceLevelLoad; // updates the countdown timer's value
+            if (countdownTimerRunning) countdownTimer = COUNTDOWN_TIMER_VAL - (int)Time.timeSinceLevelLoad; // updates the countdown timer's value
             if (countdownTimer > 1) countdownTimerText.text = (countdownTimer - 1).ToString(); // updates countdown timer's text
-            else if (countdownTimer == 1) countdownTimerText.text = "FIGHT!";
+            else if (countdownTimer == 1) {
+                countdownTimerText.text = "FIGHT!";
+                countdownTimer = 0;
+                countdownTimerRunning = false;
+            }
             else if (countdownTimer <= -1) countdownTimerText.text = "TIME'S UP!";
             else {
                 gameOn = true; // when countdown timer is finished, starts the games
@@ -66,6 +71,7 @@ public class GUIScript : MonoBehaviour
             if (timer <= 0)
             {
                 GameOver(0); // checks each players health and makes a verdict on who won based on that
+                countdownTimer = -1; // displays "TIME'S UP!" to the screen
             }
         }
         timerText.text = timer.ToString();
@@ -73,6 +79,7 @@ public class GUIScript : MonoBehaviour
 
     public void GameOver(int player)
     {
+        gameOn = false;
         switch (player)
         {
             case 0:
