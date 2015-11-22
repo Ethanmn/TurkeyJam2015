@@ -22,7 +22,11 @@ public class Turkey_WalkState : I_ActorState
     {
         ActorController ac = actor.GetComponent<ActorController>();
 
-        if (!Input.GetKey(ac.LEFT) && !Input.GetKey(ac.RIGHT))
+        if (Input.GetKeyDown(ac.ATTACK1))
+        {
+            return new Turkey_PunchState();
+        }
+        else if (!Input.GetKey(ac.LEFT) && !Input.GetKey(ac.RIGHT))
         {
             return new Turkey_IdleState();
         }

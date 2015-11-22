@@ -4,6 +4,7 @@ using UnityEngine;
 public class Santa_HitState : I_ActorState
 {
     float timer = 0;
+
     void I_ActorState.OnEnter(Transform actor)
     {
         actor.GetComponent<Animator>().SetBool("IsHit", true);
@@ -25,6 +26,9 @@ public class Santa_HitState : I_ActorState
         }
         else
         {
+            if (actor.GetComponent<ActorStats>().isDead())
+                return new Santa_DeathState();
+
             timer += dt;
             return null;
         }

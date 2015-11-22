@@ -27,6 +27,9 @@ public class Turkey_HitState : I_ActorState
         }
         else
         {
+            if (actor.GetComponent<ActorStats>().isDead())
+                return new Turkey_DeathState();
+
             timer += dt;
             return null;
         }
