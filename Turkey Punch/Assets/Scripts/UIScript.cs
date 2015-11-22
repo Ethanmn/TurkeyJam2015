@@ -15,8 +15,8 @@ public class UIScript : MonoBehaviour
         player1Stats = GameObject.FindGameObjectWithTag("Santa").GetComponent<ActorStats>();
         player2Stats = GameObject.FindGameObjectWithTag("Turkey").GetComponent<ActorStats>();
 
-        timerText = gameObject.GetComponentsInChildren<Text>()[1]; // initialize timer's text (NOTE: value may change based on ordering in gameobject)
-        announcerText = gameObject.GetComponentsInChildren<Text>()[0]; // see line above
+        timerText = GameObject.FindGameObjectWithTag("TimerText").GetComponent<Text>();
+        announcerText = GameObject.FindGameObjectWithTag("AnnouncerText").GetComponent<Text>();
     }
 
     public void Update() /* this method updates the health bars with respect to the each player's health stats */
