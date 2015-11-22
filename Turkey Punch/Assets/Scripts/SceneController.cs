@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class SceneController : MonoBehaviour {
-    private readonly int START_TIMER_VAL = 20, COUNTDOWN_TIMER_VAL = 4;
+    private readonly int START_TIMER_VAL = 99, COUNTDOWN_TIMER_VAL = 4;
 
     private int gameTimer, countdownTimer, gameOverTimer;
 

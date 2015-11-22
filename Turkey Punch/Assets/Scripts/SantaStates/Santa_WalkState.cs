@@ -28,6 +28,12 @@ public class Santa_WalkState : I_ActorState
         {
             return new Santa_PunchState();
         }
+        else if (Input.GetKey(ac.SPECIAL))
+        {
+            if (actor.GetComponent<ActorStats>().SpecialCharge >= 50)
+                return new Santa_SpecialState();
+            return null;
+        }
         else if (!Input.GetKey(ac.LEFT) && !Input.GetKey(ac.RIGHT))
         {
             return new Santa_IdleState();
@@ -64,11 +70,6 @@ public class Santa_WalkState : I_ActorState
             // Direction is move left 
 
             moveDir.x = -maxSpeed;
-        }
-        else if (Input.GetKey(ac.SPECIAL))
-        {
-            if (actor.GetComponent<ActorStats>().SpecialCharge >= 50)
-                return new Santa_SpecialState();
         }
         else if (Input.GetKey(ac.RIGHT))
         {

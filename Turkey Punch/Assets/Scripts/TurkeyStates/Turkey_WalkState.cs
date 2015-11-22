@@ -32,6 +32,7 @@ public class Turkey_WalkState : I_ActorState
         {
             if (actor.GetComponent<ActorStats>().SpecialCharge >= 50)
                 return new Santa_SpecialState();
+            return null;
         }
         else if (!Input.GetKey(ac.LEFT) && !Input.GetKey(ac.RIGHT))
         {
