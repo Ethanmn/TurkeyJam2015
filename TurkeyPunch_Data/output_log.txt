@@ -15,11 +15,17 @@ Loading C:\Users\Cole Twitchell\Desktop\GitHub\TurkeyJam2015\TurkeyPunch_Data\Ma
 Platform assembly: C:\Users\Cole Twitchell\Desktop\GitHub\TurkeyJam2015\TurkeyPunch_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
 Loading C:\Users\Cole Twitchell\Desktop\GitHub\TurkeyJam2015\TurkeyPunch_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
 Platform assembly: C:\Users\Cole Twitchell\Desktop\GitHub\TurkeyJam2015\TurkeyPunch_Data\Managed\System.Core.dll (this message is harmless)
-- Completed reload, in  0.063 seconds
+- Completed reload, in  0.066 seconds
 desktop: 2160x1440 59Hz; virtual: 2160x1440 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
 <RI> Initialized touch support.
 Platform assembly: C:\Users\Cole Twitchell\Desktop\GitHub\TurkeyJam2015\TurkeyPunch_Data\Managed\System.dll (this message is harmless)
 Setting up 1 worker threads for Enlighten.
-  Thread -> id: aa8 -> priority: 1 
+  Thread -> id: 31fc -> priority: 1 
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 6.590118 ms
+
+Unloading 25 unused Assets to reduce memory usage. Loaded Objects now: 375.
+Total: 0.675351 ms (FindLiveObjects: 0.030380 ms CreateObjectMapping: 0.029970 ms MarkObjects: 0.385504 ms  DeleteObjects: 0.229085 ms)
+
