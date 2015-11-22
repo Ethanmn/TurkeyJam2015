@@ -78,11 +78,7 @@ PlayerSettings:
   metroEnableLowLatencyPresentationAPI: 0
   xboxOneDisableKinectGpuReservation: 0
   virtualRealitySupported: 0
-<<<<<<< HEAD
-  productGUID: 6f68eaf686c8fae4d93c580a0f1721db
-=======
-  productGUID: ad4bade9520f2414580571a2097df6da
->>>>>>> origin/master
+  productGUID: 89cc17eac2817ad4c8ac0cd1e9344655
   AndroidBundleVersionCode: 1
   AndroidMinSdkVersion: 9
   AndroidPreferredInstallLocation: 1
@@ -118,11 +114,7 @@ PlayerSettings:
   iOSLaunchScreenLandscape: {fileID: 0}
   iOSLaunchScreenBackgroundColor:
     serializedVersion: 2
-<<<<<<< HEAD
-    rgba: 4279394270
-=======
     rgba: 0
->>>>>>> origin/master
   iOSLaunchScreenFillPct: 100
   iOSLaunchScreenSize: 100
   iOSLaunchScreenCustomXibPath: 
@@ -205,25 +197,12 @@ PlayerSettings:
   ps4ApplicationParam3: 0
   ps4ApplicationParam4: 0
   ps4GarlicHeapSize: 2048
-<<<<<<< HEAD
-  ps4Passcode: 1O8YFOGKjxRrJBdT3hVOfoaMeAjSWfch
-=======
-  ps4Passcode: eaoEiIgxIX4a2dREbbSqWy6yhKIDCdJO
->>>>>>> origin/master
+  ps4Passcode: YdD3ojxSnqPTGfRyilOYGxlSXPtLJboH
   ps4pnSessions: 1
   ps4pnPresence: 1
   ps4pnFriends: 1
   ps4pnGameCustomData: 1
   playerPrefsSupport: 0
-<<<<<<< HEAD
-=======
-  ps4ReprojectionSupport: 0
-  ps4attribUserManagement: 0
-  ps4attribMoveSupport: 0
-  ps4attrib3DSupport: 0
-  ps4attribShareSupport: 0
-  ps4IncludedModules: []
->>>>>>> origin/master
   monoEnv: 
   psp2Splashimage: {fileID: 0}
   psp2NPTrophyPackPath: 
@@ -242,11 +221,7 @@ PlayerSettings:
   psp2LiveAreaTrialPath: 
   psp2PatchChangeInfoPath: 
   psp2PatchOriginalPackage: 
-<<<<<<< HEAD
-  psp2PackagePassword: oZYFYZ5B6kzMCk8R6BEuZMrF6cI6NX8D
-=======
-  psp2PackagePassword: yapnxrpMCARCr4zdGc81tBDKsMlaZTXC
->>>>>>> origin/master
+  psp2PackagePassword: 8S4kwIgTxSl1C00GOzOLMrbAyfKUUTsG
   psp2KeystoneFile: 
   psp2MemoryExpansionMode: 0
   psp2DRMType: 0
@@ -392,29 +367,21 @@ PlayerSettings:
   XboxOneAllowedProductIds: []
   XboxOnePersistentLocalStorageSize: 0
   intPropertyNames:
-  - Android::ScriptingBackend
   - Metro::ScriptingBackend
-  - Standalone::ScriptingBackend
   - WP8::ScriptingBackend
   - WebGL::ScriptingBackend
   - WebGL::audioCompressionFormat
   - WebGL::exceptionSupport
   - WebGL::memorySize
-  - WebPlayer::ScriptingBackend
   - iOS::Architecture
-  - iOS::EnableIncrementalBuildSupportForIl2cpp
   - iOS::ScriptingBackend
-  Android::ScriptingBackend: 0
   Metro::ScriptingBackend: 2
-  Standalone::ScriptingBackend: 0
   WP8::ScriptingBackend: 2
   WebGL::ScriptingBackend: 1
   WebGL::audioCompressionFormat: 4
   WebGL::exceptionSupport: 1
   WebGL::memorySize: 256
-  WebPlayer::ScriptingBackend: 0
   iOS::Architecture: 2
-  iOS::EnableIncrementalBuildSupportForIl2cpp: 0
   iOS::ScriptingBackend: 1
   boolPropertyNames:
   - WebGL::analyzeBuildSize
@@ -428,10 +395,8 @@ PlayerSettings:
   stringPropertyNames:
   - WebGL::emscriptenArgs
   - WebGL::template
-  - additionalIl2CppArgs::additionalIl2CppArgs
   WebGL::emscriptenArgs: 
   WebGL::template: APPLICATION:Default
-  additionalIl2CppArgs::additionalIl2CppArgs: 
   firstStreamedSceneWithResources: 0
   cloudProjectId: 
   projectId: 
