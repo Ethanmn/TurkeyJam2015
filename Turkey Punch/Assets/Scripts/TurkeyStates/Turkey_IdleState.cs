@@ -41,7 +41,7 @@ public class Turkey_IdleState : I_ActorState
         else if (Input.GetKey(ac.SPECIAL))
         {
             if (actor.GetComponent<ActorStats>().SpecialCharge >= 50)
-                return new Santa_SpecialState();
+                return new Turkey_SpecialState();
         }
         else if (Input.GetKey(ac.BLOCK))
         {
