@@ -89,12 +89,15 @@ public class GUIScript : MonoBehaviour
                     Debug.Log("Player 2 wins!");
                 else
                     Debug.Log("It's a tie!");
+                Application.LoadLevel(0);
                 break;
             case 1:
                 Debug.Log("Player 1 wins!");
+                Application.LoadLevel(0);
                 break;
             case 2:
                 Debug.Log("Player 2 wins!");
+                Application.LoadLevel(0);
                 break;
         }
     }
