@@ -13,27 +13,36 @@ public class GUIScript : MonoBehaviour
     private int timer;
     private int countdownTimer;
 
-    private float p1life;
-    private float p2life;
+    private GameObject player1, player2;
+    private ActorStats player1Stats, player2Stats;
 
-    public void Start() {
-        p1life = 100;
-        p2life = 100;
+    public void Start()
+    {
         guiStyle = new GUIStyle();
         guiStyle.fontSize = 60;
         timer = START_TIMER_VAL;
         timerText = gameObject.GetComponentsInChildren<Text>()[1];
         countdownTimerText = gameObject.GetComponentsInChildren<Text>()[0];
+
+        player1 = GameObject.FindGameObjectWithTag("Santa");
+        player2 = GameObject.FindGameObjectWithTag("Turkey");
+
+        player1Stats = player1.GetComponent<ActorStats>();
+        player2Stats = player2.GetComponent<ActorStats>();
     }
-    public void Update() {
-        /* TO DO: Implement these functions on hitbox collisions. */
-        if (Input.GetKeyUp(KeyCode.A))
+
+    public void Update()
+    {
+        transform.FindChild("P1HealthBar").transform.localScale = new Vector3(player1Stats.CurrentHealth / 100f, 1, 1);
+        if (player1Stats.isDead())
         {
-            DamageP1(5);
+            GameOver(1);
         }
-        if (Input.GetKeyUp(KeyCode.S))
+
+        transform.FindChild("P2HealthBar").transform.localScale = new Vector3(player2Stats.CurrentHealth / 100f, 1, 1);
+        if (player2Stats.isDead())
         {
-            DamageP2(5);
+            GameOver(2);
         }
 
         /* draw and update timer */
@@ -41,7 +50,8 @@ public class GUIScript : MonoBehaviour
     }
 
     /* this function draws the timer to the screen */
-    private void TimerUpdate() {
+    private void TimerUpdate()
+    {
         if (!gameOn)
         {
             countdownTimer = COUNTDOWN_TIMER_VAL - (int)Time.timeSinceLevelLoad;
@@ -49,7 +59,9 @@ public class GUIScript : MonoBehaviour
             else if (countdownTimer == 1) countdownTimerText.text = "FIGHT!";
             else if (countdownTimer <= -1) countdownTimerText.text = "TIME'S UP!";
             else gameOn = true;
-        } else {
+        }
+        else
+        {
             countdownTimerText.text = "";
             timer = START_TIMER_VAL - (int)Time.timeSinceLevelLoad + COUNTDOWN_TIMER_VAL;
             if (timer <= 0)
@@ -62,30 +74,15 @@ public class GUIScript : MonoBehaviour
         timerText.text = timer.ToString();
     }
 
-    public void DamageP1(float amount) {
-        p1life -= amount;
-        transform.FindChild("P1HealthBar").transform.localScale += new Vector3((float)(-.01* amount), 0, 0);
-        CheckLife(1);
-    }
-    public void DamageP2(float amount) {
-        p2life -= amount;
-        transform.FindChild("P2HealthBar").transform.localScale += new Vector3((float)(-.01 * amount), 0, 0);
-        CheckLife(2);
-    }
-    
-    private void CheckLife(int player) { /* perhaps modify return type to int? */ 
+    public void GameOver(int player)
+    {
         switch (player)
         {
             case 1:
-                if (p1life <= 0) {
-                    /* TO DO: Implement defeat script */
-                }
+                Debug.Log("Player 1 wins!");
                 break;
             case 2:
-                if (p2life <= 0)
-                {
-                    /* TO DO: Implement defeat script */
-                }
+                Debug.Log("Player 2 wins!");
                 break;
         }
     }
