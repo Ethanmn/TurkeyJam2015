@@ -2,9 +2,9 @@
 using System.Collections;
 
 public class SceneController : MonoBehaviour {
-    private readonly int START_TIMER_VAL = 90, COUNTDOWN_TIMER_VAL = 4;
+    private readonly int START_TIMER_VAL = 20, COUNTDOWN_TIMER_VAL = 4;
 
-    private int gameTimer, countdownTimer;
+    private int gameTimer, countdownTimer, gameOverTimer;
 
     private UIScript ui;
 
@@ -64,6 +64,8 @@ public class SceneController : MonoBehaviour {
                 {
                     if (gameTimer <= 0)
                         ui.TimerText.text = "0";
+
+                    gameOverTimer = (int)Time.timeSinceLevelLoad;
                     nextState = GameState.Over;
                 }
                 else
@@ -74,7 +76,24 @@ public class SceneController : MonoBehaviour {
                 break;
             case GameState.Over:
                 if (gameTimer <= 0)
-                    ui.AnnouncerText.text = "TIME'S UP";
+                {
+                    ui.AnnouncerText.text = "TIME'S UP!";
+                    if (player1Stats.CurrentHealth < player2Stats.CurrentHealth)
+                    {
+                        player1.GetComponent<ActorController>().SetState(new Santa_DeathState());
+                        player2.GetComponent<ActorController>().SetState(new Turkey_VictoryState());
+                    }
+                    else if (player1Stats.CurrentHealth > player2Stats.CurrentHealth)
+                    {
+                        player1.GetComponent<ActorController>().SetState(new Santa_VictoryState());
+                        player2.GetComponent<ActorController>().SetState(new Turkey_DeathState());
+                    }
+                    else
+                    {
+                        player1.GetComponent<ActorController>().SetState(new Santa_DeathState());
+                        player2.GetComponent<ActorController>().SetState(new Turkey_DeathState());
+                    }
+                }
                 else
                 {
                     ui.AnnouncerText.text = "K.O.";
@@ -87,6 +106,10 @@ public class SceneController : MonoBehaviour {
                         player1.GetComponent<ActorController>().SetState(new Santa_VictoryState());
 
                     }
+                }
+                if (Time.timeSinceLevelLoad - gameOverTimer > 10)
+                {
+                    Application.LoadLevel("MainMenu");
                 }
                 nextState = currentState;
                 break;
