@@ -25,8 +25,8 @@ public class Santa_SpecialState : I_ActorState
         // Summon the SLAY
         GameObject.Instantiate<GameObject>(Resources.Load<GameObject>("Prefabs/Slay"));
 
-        // Enable the hit box so it can hit things
-        //actor.FindChild("SpecialHitBox").GetComponent<BoxCollider2D>().enabled = true;
+        // Dissable the hit box so Santa is invincible during special
+        actor.FindChild("SantaHitBox").GetComponent<Collider2D>().enabled = false;
     }
 
     void I_ActorState.OnExit(Transform actor)
@@ -34,8 +34,8 @@ public class Santa_SpecialState : I_ActorState
         // Set the animation flag
         actor.GetComponent<Animator>().SetBool("IsSpecial", false);
 
-        // Dissable the hit box so it doesn't hit things
-        //actor.FindChild("SpecialHitBox").GetComponent<BoxCollider2D>().enabled = false;
+        // Enable the hit box
+        actor.FindChild("SantaHitBox").GetComponent<Collider2D>().enabled = true;
     }
 
     I_ActorState I_ActorState.Update(Transform actor, float dt)
