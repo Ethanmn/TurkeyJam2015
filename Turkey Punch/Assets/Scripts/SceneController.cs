@@ -34,6 +34,7 @@ public class SceneController : MonoBehaviour {
         switch (currentState)
         {
             case GameState.Countdown:
+                ui.TimerText.text = START_TIMER_VAL.ToString();
                 countdownTimer = COUNTDOWN_TIMER_VAL - (int)Time.timeSinceLevelLoad;
                 if (countdownTimer > 1)
                 {
