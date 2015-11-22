@@ -4,6 +4,12 @@ using UnityEngine;
 public class Santa_HitState : I_ActorState
 {
     float timer = 0;
+    private int damage = 5;
+
+    public Santa_HitState(int damage)
+    {
+        this.damage = damage;
+    }
 
     void I_ActorState.OnEnter(Transform actor)
     {
