@@ -3,23 +3,20 @@ using UnityEngine.UI;
 
 public class GUIScript : MonoBehaviour
 {
-    Text timerText, countdownTimerText;
-    private readonly int START_TIMER_VAL = 90, COUNTDOWN_TIMER_VAL = 4;
-    private bool gameOn = false;
+    Text timerText, countdownTimerText; // the text drawn to the screen
+    private readonly int START_TIMER_VAL = 90, COUNTDOWN_TIMER_VAL = 4; // the initial timer conditions NOTE: countdownTimerVal should be 1 greater than desired value.
+    private bool gameOn = false; // start the game immediately: true, start after countdown timer: false
+    
+    private int timer, countdownTimer; 
 
-    private GUIStyle guiStyle;
-    private int timer, countdownTimer;
-
-    private GameObject player1, player2;
+    private GameObject player1, player2; 
     private ActorStats player1Stats, player2Stats;
 
     public void Start()
     {
-        guiStyle = new GUIStyle();
-        guiStyle.fontSize = 60;
-        timer = START_TIMER_VAL;
-        timerText = gameObject.GetComponentsInChildren<Text>()[1];
-        countdownTimerText = gameObject.GetComponentsInChildren<Text>()[0];
+        timer = START_TIMER_VAL; // initialize timer value
+        timerText = gameObject.GetComponentsInChildren<Text>()[1]; // initialize timer's text (NOTE: value may change based on ordering in gameobject)
+        countdownTimerText = gameObject.GetComponentsInChildren<Text>()[0]; // see line above
 
         player1 = GameObject.FindGameObjectWithTag("Santa");
         player2 = GameObject.FindGameObjectWithTag("Turkey");
@@ -28,7 +25,7 @@ public class GUIScript : MonoBehaviour
         player2Stats = player2.GetComponent<ActorStats>();
     }
 
-    public void Update()
+    public void Update() /* this method updates the health bars with respect to the each player's health stats */
     {
         transform.FindChild("GUI").transform.FindChild("P1HealthBar").transform.localScale = new Vector3(player1Stats.CurrentHealth / 100f, 1, 1);
         if (player1Stats.isDead())
@@ -49,23 +46,23 @@ public class GUIScript : MonoBehaviour
     /* this function draws the timer to the screen */
     private void TimerUpdate()
     {
-        if (!gameOn)
+        if (!gameOn) // countdown timer should be running (game timer should not)
         {
-            countdownTimer = COUNTDOWN_TIMER_VAL - (int)Time.timeSinceLevelLoad;
-            if (countdownTimer > 1) countdownTimerText.text = (countdownTimer - 1).ToString();
+            countdownTimer = COUNTDOWN_TIMER_VAL - (int)Time.timeSinceLevelLoad; // updates the countdown timer's value
+            if (countdownTimer > 1) countdownTimerText.text = (countdownTimer - 1).ToString(); // updates countdown timer's text
             else if (countdownTimer == 1) countdownTimerText.text = "FIGHT!";
             else if (countdownTimer <= -1) countdownTimerText.text = "TIME'S UP!";
-            else gameOn = true;
+            else {
+                gameOn = true; // when countdown timer is finished, starts the games
+                countdownTimerText.text = ""; // not nullifying the text string will keep displaying text to the screen. keep this null.
+            }
         }
-        else
+        else // countdown timer is finished counting down.
         {
-            countdownTimerText.text = "";
-            timer = START_TIMER_VAL - (int)Time.timeSinceLevelLoad + COUNTDOWN_TIMER_VAL;
+            timer = START_TIMER_VAL - (int)Time.timeSinceLevelLoad + COUNTDOWN_TIMER_VAL; // updates timer
             if (timer <= 0)
             {
-                /* TO DO: Implement game over mechanic here. */
-                countdownTimer = -1;
-                gameOn = false;
+                GameOver(0); // checks each players health and makes a verdict on who won based on that
             }
         }
         timerText.text = timer.ToString();
@@ -75,11 +72,19 @@ public class GUIScript : MonoBehaviour
     {
         switch (player)
         {
+            case 0:
+                if (player1Stats.CurrentHealth > player2Stats.CurrentHealth)
+                    Debug.Log("Player 1 wins!");
+                else if (player2Stats.CurrentHealth > player1Stats.CurrentHealth)
+                    Debug.Log("Player 2 wins!");
+                else
+                    Debug.Log("It's a tie!");
+                break;
             case 1:
-                Debug.Log("Player 1 wins!");
+                Debug.Log("Player 2 wins!");
                 break;
             case 2:
-                Debug.Log("Player 2 wins!");
+                Debug.Log("Player 1 wins!");
                 break;
         }
     }
