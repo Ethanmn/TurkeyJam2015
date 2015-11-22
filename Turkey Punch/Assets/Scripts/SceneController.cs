@@ -31,6 +31,8 @@ public class SceneController : MonoBehaviour {
         player1.GetComponent<ActorController>().enabled = false;
         player2.GetComponent<ActorController>().enabled = false;
     }
+
+    
 	
 	// Update is called once per frame
 	void Update () {

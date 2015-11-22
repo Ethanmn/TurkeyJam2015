@@ -7,7 +7,7 @@ public class Turkey_SpecialState : I_ActorState
     private float animTimer, timer;
 
     // Attack Time
-    private float animTime = 0.75f;
+    private float animTime = 0.5833f;
     private float time = 2f;
 
     void I_ActorState.OnEnter(Transform actor)
@@ -25,7 +25,9 @@ public class Turkey_SpecialState : I_ActorState
         actor.gameObject.GetComponent<SpriteRenderer>().sortingOrder = 1;
 
         // Dissable the hit box so Turkey is invincible during special
-        actor.FindChild("TurkeyHitBox").GetComponent<Collider2D>().enabled = false;
+        //actor.FindChild("TurkeyHitBox").GetComponent<Collider2D>().enabled = false;
+        // Enable block hitbox
+        actor.FindChild("BlockHitBox").GetComponent<Collider2D>().enabled = true;
     }
 
     void I_ActorState.OnExit(Transform actor)
@@ -35,6 +37,8 @@ public class Turkey_SpecialState : I_ActorState
 
         // Enable the hit box
         actor.FindChild("TurkeyHitBox").GetComponent<Collider2D>().enabled = true;
+
+        actor.FindChild("BlockHitBox").GetComponent<Collider2D>().enabled = false;
     }
 
     I_ActorState I_ActorState.Update(Transform actor, float dt)

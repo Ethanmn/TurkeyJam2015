@@ -11,7 +11,7 @@ public class SantaPunch : MonoBehaviour {
         // If the other hit box is the Turkey's hitbox
         if (col.name == "TurkeyHitBox")
         {
-            Debug.Log("HIT THE TURKEY!");
+            //Debug.Log("HIT THE TURKEY!");
             // Hit the Turkey
             col.GetComponentInParent<ActorController>().SetState(new Turkey_HitState(5));
         }
@@ -19,7 +19,7 @@ public class SantaPunch : MonoBehaviour {
         // If the other hit box is Santa's hitbox
         if (col.name == "SantaHitBox" && !(col.transform.parent == gameObject.transform.parent))
         {
-            Debug.Log("HIT THE SANTA! " + col.transform.parent.name);
+            //Debug.Log("HIT THE SANTA! " + col.transform.parent.name);
             // Hit the Santa
             col.GetComponentInParent<ActorController>().SetState(new Santa_HitState(5));
         }

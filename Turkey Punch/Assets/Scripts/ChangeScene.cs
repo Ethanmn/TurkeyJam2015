@@ -4,16 +4,27 @@ using System.Collections;
 public class ChangeScene : MonoBehaviour {
 
 	public void ChangeToScene(string scene) {
-		Application.LoadLevel (scene);
+        //Application.LoadLevel (scene);
 
         if (scene == "FightingScene")
         {
             Destroy(GameObject.Find("Music"));
+            Application.LoadLevel(scene);
+            return;
         }
         else
         {
-            DontDestroyOnLoad(GameObject.Find("Music"));
+            foreach (Transform child in GameObject.Find(scene).transform)
+            {
+                Debug.Log(scene + " child " + child.name);
+                child.gameObject.SetActive(true);
+            }
+            foreach (Transform child in transform.parent)
+            {
+                child.gameObject.SetActive(false);
+            }
         }
+        
 	}
 
 	public void ExitGame() {
