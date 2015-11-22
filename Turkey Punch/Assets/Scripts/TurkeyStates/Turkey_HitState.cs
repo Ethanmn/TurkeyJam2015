@@ -4,15 +4,26 @@ using UnityEngine;
 public class Turkey_HitState : I_ActorState
 {
     float timer = 0;
+    private int damage = 5;
+
+    public Turkey_HitState(int damage)
+    {
+        this.damage = damage;
+    }
+
     void I_ActorState.OnEnter(Transform actor)
     {
         Debug.Log("Turkey entered hit state");
         actor.GetComponent<Animator>().SetBool("IsHit", true);
         actor.GetComponentInChildren<ParticleSystem>().Play();
 
+<<<<<<< HEAD
         actor.GetComponent<AudioSource>().Play();
 
         actor.GetComponent<ActorStats>().Hurt(5);
+=======
+        actor.GetComponent<ActorStats>().Hurt(damage);
+>>>>>>> origin/master
     }
 
     void I_ActorState.OnExit(Transform actor)
