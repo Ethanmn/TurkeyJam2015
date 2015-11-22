@@ -866,7 +866,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &938620953
 RectTransform:
   m_ObjectHideFlags: 0
@@ -993,7 +993,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: .192156866, g: .301960796, b: .474509805, a: .0196078438}
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: .0196078438}
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
@@ -1873,31 +1873,31 @@ Prefab:
       objectReference: {fileID: 968697538}
     - target: {fileID: 108636, guid: 59ec42c64c7698a4e932979a710e291e, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 166112, guid: 59ec42c64c7698a4e932979a710e291e, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 189610, guid: 59ec42c64c7698a4e932979a710e291e, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 185386, guid: 59ec42c64c7698a4e932979a710e291e, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 176974, guid: 59ec42c64c7698a4e932979a710e291e, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 124614, guid: 59ec42c64c7698a4e932979a710e291e, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 112236, guid: 59ec42c64c7698a4e932979a710e291e, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 11423222, guid: 59ec42c64c7698a4e932979a710e291e, type: 2}
       propertyPath: m_Text
