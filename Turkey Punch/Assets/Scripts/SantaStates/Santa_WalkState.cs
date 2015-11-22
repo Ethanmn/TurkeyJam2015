@@ -78,6 +78,20 @@ public class Santa_WalkState : I_ActorState
         else
             actor.localScale = rightFace;
 
-        trans.Translate(moveDir);
+        float verticalSize = Camera.main.orthographicSize * 2.0f;
+        float horizontalSize = verticalSize * Screen.width / Screen.height;
+
+        if (trans.position.x + moveDir.x < -horizontalSize /2)
+        {
+            trans.position = trans.position = new Vector3(-horizontalSize / 2, trans.position.y, trans.position.z);
+        }
+        else if (trans.position.x + moveDir.x > horizontalSize / 2)
+        {
+            trans.position = trans.position = new Vector3(horizontalSize / 2, trans.position.y, trans.position.z);
+        }
+        else
+        {
+            trans.Translate(moveDir);
+        }
     }
 }
