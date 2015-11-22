@@ -81,10 +81,10 @@ public class GUIScript : MonoBehaviour
                     Debug.Log("It's a tie!");
                 break;
             case 1:
-                Debug.Log("Player 2 wins!");
+                Debug.Log("Player 1 wins!");
                 break;
             case 2:
-                Debug.Log("Player 1 wins!");
+                Debug.Log("Player 2 wins!");
                 break;
         }
     }

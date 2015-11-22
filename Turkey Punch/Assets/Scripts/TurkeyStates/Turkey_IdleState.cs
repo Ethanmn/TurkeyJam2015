@@ -19,14 +19,6 @@ public class Turkey_IdleState : I_ActorState
 
     I_ActorState I_ActorState.Update(Transform actor, float dt)
     {
-        Vector3 leftFace = new Vector3(-1, 1);
-        Vector3 rightFace = new Vector3(1, 1);
-
-        if (actor.transform.localPosition.x > GameObject.FindGameObjectWithTag("Santa").GetComponent<Transform>().localPosition.x)
-            actor.localScale = leftFace;
-        else
-            actor.localScale = rightFace;
-
         return null;
     }
 
