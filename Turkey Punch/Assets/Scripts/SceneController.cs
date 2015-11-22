@@ -42,7 +42,7 @@ public class SceneController : MonoBehaviour {
                 }
                 else if (countdownTimer > 0)
                 {
-                    ui.AnnouncerText.text = "Fight!";
+                    ui.AnnouncerText.text = "FIGHT!";
                     nextState = currentState;
                 }
                 else
@@ -67,7 +67,7 @@ public class SceneController : MonoBehaviour {
                 break;
             case GameState.Over:
                 if (gameTimer <= 0)
-                    ui.AnnouncerText.text = "Time's Up";
+                    ui.AnnouncerText.text = "TIME'S UP";
                 else
                     ui.AnnouncerText.text = "K.O.";
                 nextState = currentState;

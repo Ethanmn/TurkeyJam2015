@@ -59,8 +59,6 @@ public class Santa_WalkState : I_ActorState
         Vector3 leftFace = new Vector3(-1, 1);
         Vector3 rightFace = new Vector3(1, 1);
 
-        ParticleSystem snow = actor.gameObject.GetComponentInChildren<ParticleSystem>();
-
         if (Input.GetKey(ac.LEFT))
         {
             // Direction is move left 
