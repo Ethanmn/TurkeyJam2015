@@ -45,7 +45,6 @@ GameObject:
   - 212: {fileID: 21265470}
   - 95: {fileID: 9544906}
   - 114: {fileID: 11423886}
-  - 61: {fileID: 6166606}
   m_Layer: 0
   m_Name: Santa
   m_TagString: Untagged
@@ -65,6 +64,23 @@ GameObject:
   - 58: {fileID: 5891296}
   m_Layer: 0
   m_Name: SantaHitBox
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &150604
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 450948}
+  - 50: {fileID: 5003634}
+  - 61: {fileID: 6134074}
+  m_Layer: 0
+  m_Name: BlockHitBox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -95,7 +111,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 110264}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: -1.62920685e-07}
-  m_LocalPosition: {x: .109999895, y: -.879999876, z: 0}
+  m_LocalPosition: {x: -.280000001, y: -.409999996, z: 0}
   m_LocalScale: {x: -1, y: 1, z: 0}
   m_Children: []
   m_Father: {fileID: 443784}
@@ -107,7 +123,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 118228}
   m_LocalRotation: {x: -.625234723, y: -.330274612, z: .330275059, w: .625234842}
-  m_LocalPosition: {x: .0599999987, y: -1.02999997, z: 0}
+  m_LocalPosition: {x: -.300000012, y: -1.55999994, z: 0}
   m_LocalScale: {x: 1, y: 1, z: .412448853}
   m_Children: []
   m_Father: {fileID: 443784}
@@ -119,15 +135,28 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 122510}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.5, y: -3.54999995, z: 0}
+  m_LocalPosition: {x: -2.5, y: -3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 431910}
   - {fileID: 484452}
   - {fileID: 473876}
   - {fileID: 430284}
+  - {fileID: 450948}
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!4 &450948
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 150604}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: .400000006, y: -.579999983, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 443784}
+  m_RootOrder: 4
 --- !u!4 &473876
 Transform:
   m_ObjectHideFlags: 1
@@ -135,7 +164,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 136884}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0, y: .129999995, z: 0}
+  m_LocalPosition: {x: -.389999986, y: -.449999988, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 443784}
@@ -147,11 +176,27 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 182996}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.21000004, y: .629999995, z: 0}
+  m_LocalPosition: {x: .861999989, y: .115999997, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 443784}
   m_RootOrder: 1
+--- !u!50 &5003634
+Rigidbody2D:
+  serializedVersion: 2
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 150604}
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: .0500000007
+  m_GravityScale: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!50 &5085952
 Rigidbody2D:
   serializedVersion: 2
@@ -210,19 +255,19 @@ BoxCollider2D:
   m_Offset: {x: -.0108582973, y: -.049950242}
   serializedVersion: 2
   m_Size: {x: 1.02171755, y: .422326505}
---- !u!61 &6166606
+--- !u!61 &6134074
 BoxCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 122510}
+  m_GameObject: {fileID: 150604}
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: -.0252661705, y: 1.18960261}
+  m_Offset: {x: -5.96046448e-08, y: .301592588}
   serializedVersion: 2
-  m_Size: {x: .788890958, y: .942718983}
+  m_Size: {x: 1, y: 2.02279472}
 --- !u!95 &9544906
 Animator:
   serializedVersion: 3
@@ -439,7 +484,7 @@ ParticleSystem:
         rgba: 4294967295
       minMaxState: 0
     startSize:
-      scalar: .699999988
+      scalar: .300000012
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -505,8 +550,8 @@ ParticleSystem:
   ShapeModule:
     serializedVersion: 2
     enabled: 1
-    type: 11
-    radius: .800000012
+    type: 10
+    radius: .400000006
     angle: 25
     length: 5
     boxX: 1

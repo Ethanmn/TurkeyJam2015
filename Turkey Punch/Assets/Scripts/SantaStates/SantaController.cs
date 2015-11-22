@@ -11,7 +11,8 @@ public class SantaController : ActorController {
         left = KeyCode.A;
         right = KeyCode.D;
         jump = KeyCode.Space;
-        attack1 = KeyCode.F;
+        attack1 = KeyCode.W;
+        block = KeyCode.S;
 
         base.Start();
 	}

@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 52011fb3f3ad9dd4682217849cb2e857
-timeCreated: 1448090984
+timeCreated: 1448148914
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -19,6 +19,7 @@ TextureImporter:
     21300024: SantaSpritesheet_12
     21300026: SantaSpritesheet_13
     21300028: SantaSpritesheet_14
+    21300030: SantaSpritesheet_15
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -72,8 +73,8 @@ TextureImporter:
         y: 672
         width: 336
         height: 336
-      alignment: 9
-      pivot: {x: .386524796, y: .348699808}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: SantaSpritesheet_1
       rect:
@@ -82,8 +83,8 @@ TextureImporter:
         y: 672
         width: 336
         height: 336
-      alignment: 9
-      pivot: {x: .386524796, y: .348699808}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: SantaSpritesheet_2
       rect:
@@ -92,8 +93,8 @@ TextureImporter:
         y: 672
         width: 336
         height: 336
-      alignment: 9
-      pivot: {x: .386524796, y: .348699808}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: SantaSpritesheet_3
       rect:
@@ -102,8 +103,8 @@ TextureImporter:
         y: 672
         width: 336
         height: 336
-      alignment: 9
-      pivot: {x: .386524796, y: .348699808}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: SantaSpritesheet_4
       rect:
@@ -112,8 +113,8 @@ TextureImporter:
         y: 672
         width: 336
         height: 336
-      alignment: 9
-      pivot: {x: .386524796, y: .348699808}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: SantaSpritesheet_5
       rect:
@@ -122,8 +123,8 @@ TextureImporter:
         y: 672
         width: 336
         height: 336
-      alignment: 9
-      pivot: {x: .386524796, y: .348699808}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: SantaSpritesheet_6
       rect:
@@ -132,8 +133,8 @@ TextureImporter:
         y: 336
         width: 336
         height: 336
-      alignment: 9
-      pivot: {x: .386524796, y: .348699808}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: SantaSpritesheet_7
       rect:
@@ -142,8 +143,8 @@ TextureImporter:
         y: 336
         width: 336
         height: 336
-      alignment: 9
-      pivot: {x: .386524796, y: .348699808}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: SantaSpritesheet_8
       rect:
@@ -152,8 +153,8 @@ TextureImporter:
         y: 336
         width: 336
         height: 336
-      alignment: 9
-      pivot: {x: .386524796, y: .348699808}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: SantaSpritesheet_9
       rect:
@@ -162,8 +163,8 @@ TextureImporter:
         y: 336
         width: 336
         height: 336
-      alignment: 9
-      pivot: {x: .386524796, y: .348699808}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: SantaSpritesheet_10
       rect:
@@ -172,8 +173,8 @@ TextureImporter:
         y: 336
         width: 336
         height: 336
-      alignment: 9
-      pivot: {x: .386524796, y: .348699808}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: SantaSpritesheet_11
       rect:
@@ -182,8 +183,8 @@ TextureImporter:
         y: 336
         width: 336
         height: 336
-      alignment: 9
-      pivot: {x: .386524796, y: .348699808}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: SantaSpritesheet_12
       rect:
@@ -192,8 +193,8 @@ TextureImporter:
         y: 0
         width: 336
         height: 336
-      alignment: 9
-      pivot: {x: .386524796, y: .348699808}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: SantaSpritesheet_13
       rect:
@@ -202,8 +203,8 @@ TextureImporter:
         y: 0
         width: 336
         height: 336
-      alignment: 9
-      pivot: {x: .386524796, y: .348699808}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: SantaSpritesheet_14
       rect:
@@ -212,8 +213,18 @@ TextureImporter:
         y: 0
         width: 336
         height: 336
-      alignment: 9
-      pivot: {x: .386524796, y: .348699808}
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SantaSpritesheet_15
+      rect:
+        serializedVersion: 2
+        x: 1008
+        y: 0
+        width: 336
+        height: 336
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 

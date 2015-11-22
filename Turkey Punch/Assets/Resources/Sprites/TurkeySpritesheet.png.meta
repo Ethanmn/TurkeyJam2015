@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 00d89d61cb90d0548bbd7cc1ffe618ed
-timeCreated: 1448141421
+timeCreated: 1448150626
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -18,6 +18,8 @@ TextureImporter:
     21300022: TurkeySpritesheet_11
     21300024: TurkeySpritesheet_12
     21300026: TurkeySpritesheet_13
+    21300028: TurkeySpritesheet_14
+    21300030: TurkeySpritesheet_15
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -198,6 +200,26 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 672
+        y: 0
+        width: 336
+        height: 336
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: TurkeySpritesheet_14
+      rect:
+        serializedVersion: 2
+        x: 1008
+        y: 0
+        width: 336
+        height: 336
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: TurkeySpritesheet_15
+      rect:
+        serializedVersion: 2
+        x: 1344
         y: 0
         width: 336
         height: 336

@@ -7,7 +7,7 @@ public class Turkey_HitState : I_ActorState
     void I_ActorState.OnEnter(Transform actor)
     {
         Debug.Log("Turkey entered hit state");
-        //actor.GetComponent<Animator>().SetBool("IsHit", true);
+        actor.GetComponent<Animator>().SetBool("IsHit", true);
         actor.GetComponentInChildren<ParticleSystem>().Play();
 
         actor.GetComponent<ActorStats>().Hurt(5);
@@ -16,7 +16,7 @@ public class Turkey_HitState : I_ActorState
     void I_ActorState.OnExit(Transform actor)
     {
         //Debug.Log("Turkey exited hit state");
-        //actor.GetComponent<Animator>().SetBool("IsHit", false);
+        actor.GetComponent<Animator>().SetBool("IsHit", false);
     }
 
     I_ActorState I_ActorState.Update(Transform actor, float dt)
