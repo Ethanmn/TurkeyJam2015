@@ -9,6 +9,7 @@ public class Santa_HitState : I_ActorState
     {
         actor.GetComponent<Animator>().SetBool("IsHit", true);
         actor.GetComponentInChildren<ParticleSystem>().Play();
+        actor.GetComponent<AudioSource>().Play();
 
         actor.GetComponent<ActorStats>().Hurt(5);
     }
