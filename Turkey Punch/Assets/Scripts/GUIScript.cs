@@ -80,24 +80,22 @@ public class GUIScript : MonoBehaviour
     public void GameOver(int player)
     {
         gameOn = false;
+        countdownTimer = 0;
         switch (player)
         {
             case 0:
                 if (player1Stats.CurrentHealth > player2Stats.CurrentHealth)
-                    Debug.Log("Player 1 wins!");
+                    countdownTimerText.text = "Player 1 wins!";
                 else if (player2Stats.CurrentHealth > player1Stats.CurrentHealth)
-                    Debug.Log("Player 2 wins!");
+                    countdownTimerText.text = "Player 2 wins!";
                 else
-                    Debug.Log("It's a tie!");
-                Application.LoadLevel(0);
+                    countdownTimerText.text = "It's a tie!";
                 break;
             case 1:
-                Debug.Log("Player 1 wins!");
-                Application.LoadLevel(0);
+                countdownTimerText.text = "Player 1 wins!";
                 break;
             case 2:
-                Debug.Log("Player 2 wins!");
-                Application.LoadLevel(0);
+                countdownTimerText.text = "Player 2 wins!";
                 break;
         }
     }
