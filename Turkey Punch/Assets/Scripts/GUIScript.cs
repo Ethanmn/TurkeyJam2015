@@ -30,13 +30,13 @@ public class GUIScript : MonoBehaviour
 
     public void Update()
     {
-        transform.FindChild("P1HealthBar").transform.localScale = new Vector3(player1Stats.CurrentHealth / 100f, 1, 1);
+        transform.FindChild("GUI").transform.FindChild("P1HealthBar").transform.localScale = new Vector3(player1Stats.CurrentHealth / 100f, 1, 1);
         if (player1Stats.isDead())
         {
             GameOver(1);
         }
 
-        transform.FindChild("P2HealthBar").transform.localScale = new Vector3(player2Stats.CurrentHealth / 100f, 1, 1);
+        transform.FindChild("GUI").transform.FindChild("P2HealthBar").transform.localScale = new Vector3(player2Stats.CurrentHealth / 100f, 1, 1);
         if (player2Stats.isDead())
         {
             GameOver(2);
