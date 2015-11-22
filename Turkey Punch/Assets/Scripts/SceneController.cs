@@ -27,6 +27,9 @@ public class SceneController : MonoBehaviour {
 
         player1Stats = player1.GetComponent<ActorStats>();
         player2Stats = player2.GetComponent<ActorStats>();
+
+        player1.GetComponent<ActorController>().enabled = false;
+        player2.GetComponent<ActorController>().enabled = false;
     }
 	
 	// Update is called once per frame
@@ -48,6 +51,8 @@ public class SceneController : MonoBehaviour {
                 }
                 else
                 {
+                    player1.GetComponent<ActorController>().enabled = true;
+                    player2.GetComponent<ActorController>().enabled = true;
                     nextState = GameState.Fight;
                 }
                 break;
