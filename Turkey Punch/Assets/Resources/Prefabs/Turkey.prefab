@@ -45,9 +45,10 @@ GameObject:
   - 212: {fileID: 21261832}
   - 95: {fileID: 9506232}
   - 114: {fileID: 11416438}
+  - 114: {fileID: 11441530}
   m_Layer: 0
   m_Name: Turkey
-  m_TagString: Untagged
+  m_TagString: Turkey
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -106,7 +107,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 130354}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.54999995, y: -3.07999992, z: 0}
+  m_LocalPosition: {x: 3.54999995, y: -3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 401340}
@@ -275,6 +276,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a4f7658a05581434cb0a54ec7dac1cf6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &11441530
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 130354}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec066dd9880dfbe4e8052a43d0effe8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!198 &19831982
@@ -777,7 +789,7 @@ ParticleSystem:
         m_PreInfinity: 2
         m_PostInfinity: 2
       minMaxState: 1
-    tilesX: 1
+    tilesX: 3
     tilesY: 1
     animationType: 0
     rowIndex: 0

@@ -45,9 +45,10 @@ GameObject:
   - 212: {fileID: 21265470}
   - 95: {fileID: 9544906}
   - 114: {fileID: 11423886}
+  - 114: {fileID: 11483896}
   m_Layer: 0
   m_Name: Santa
-  m_TagString: Untagged
+  m_TagString: Santa
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -110,8 +111,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 110264}
-  m_LocalRotation: {x: 0, y: 1, z: 0, w: -1.62920685e-07}
-  m_LocalPosition: {x: -.280000001, y: -.409999996, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: .57175976, w: .820421159}
+  m_LocalPosition: {x: -.279999971, y: -.410000086, z: 0}
   m_LocalScale: {x: -1, y: 1, z: 0}
   m_Children: []
   m_Father: {fileID: 443784}
@@ -261,7 +262,7 @@ BoxCollider2D:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 150604}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
@@ -305,6 +306,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7fc279eff5331e741be697f404c7d2dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &11483896
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 122510}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2858634b8f7c2bf468892105dbc1ada7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!198 &19821936
@@ -484,7 +496,7 @@ ParticleSystem:
         rgba: 4294967295
       minMaxState: 0
     startSize:
-      scalar: .300000012
+      scalar: .5
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -557,7 +569,7 @@ ParticleSystem:
     boxX: 1
     boxY: 1
     boxZ: 1
-    arc: 180
+    arc: 200
     placementMode: 0
     m_Mesh: {fileID: 0}
     randomDirection: 0
