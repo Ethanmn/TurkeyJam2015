@@ -21,6 +21,9 @@ public class GUIScript : MonoBehaviour
         player1 = GameObject.FindGameObjectWithTag("Santa");
         player2 = GameObject.FindGameObjectWithTag("Turkey");
 
+        print("Santa " + player1);
+        print("Turkey " + player2);
+
         player1Stats = player1.GetComponent<ActorStats>();
         player2Stats = player2.GetComponent<ActorStats>();
     }
