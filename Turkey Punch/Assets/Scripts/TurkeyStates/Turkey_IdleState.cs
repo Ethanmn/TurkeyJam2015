@@ -7,14 +7,14 @@ public class Turkey_IdleState : I_ActorState
 
     void I_ActorState.OnEnter(Transform actor)
     {
-        Debug.Log("Turkey entered idle state");
+        //Debug.Log("Turkey entered idle state");
 
         actor.GetComponent<Animator>().SetFloat("MoveSpeed", 0);
     }
 
     void I_ActorState.OnExit(Transform actor)
     {
-        Debug.Log("Turkey exited idle state");
+        //Debug.Log("Turkey exited idle state");
     }
 
     I_ActorState I_ActorState.Update(Transform actor, float dt)

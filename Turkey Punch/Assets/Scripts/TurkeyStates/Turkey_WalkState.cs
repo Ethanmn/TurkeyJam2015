@@ -7,12 +7,12 @@ public class Turkey_WalkState : I_ActorState
 
     void I_ActorState.OnEnter(Transform actor)
     {
-        Debug.Log("Turkey entered walk state");
+        //Debug.Log("Turkey entered walk state");
     }
 
     void I_ActorState.OnExit(Transform actor)
     {
-        Debug.Log("Turkey exited walk state");
+        //Debug.Log("Turkey exited walk state");
     }
 
     I_ActorState I_ActorState.Update(Transform actor, float dt)

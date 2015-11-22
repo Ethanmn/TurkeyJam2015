@@ -85,6 +85,48 @@ NavMeshSettings:
     cellSize: .166666672
     manualCellSize: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1001 &26785007
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 479240, guid: ef2ba3d54c2417b4aba5e7d0b528fe5b, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -21.8600006
+      objectReference: {fileID: 0}
+    - target: {fileID: 479240, guid: ef2ba3d54c2417b4aba5e7d0b528fe5b, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -3.08999991
+      objectReference: {fileID: 0}
+    - target: {fileID: 479240, guid: ef2ba3d54c2417b4aba5e7d0b528fe5b, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -2.93945312
+      objectReference: {fileID: 0}
+    - target: {fileID: 479240, guid: ef2ba3d54c2417b4aba5e7d0b528fe5b, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 479240, guid: ef2ba3d54c2417b4aba5e7d0b528fe5b, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 479240, guid: ef2ba3d54c2417b4aba5e7d0b528fe5b, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 479240, guid: ef2ba3d54c2417b4aba5e7d0b528fe5b, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 479240, guid: ef2ba3d54c2417b4aba5e7d0b528fe5b, type: 2}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: ef2ba3d54c2417b4aba5e7d0b528fe5b, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &50230968
 GameObject:
   m_ObjectHideFlags: 0
@@ -309,7 +351,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 419706, guid: 01d078b37a9a9b646a2e9a2b6654a386, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 3.54999995
+      value: 3.01999998
       objectReference: {fileID: 0}
     - target: {fileID: 419706, guid: 01d078b37a9a9b646a2e9a2b6654a386, type: 2}
       propertyPath: m_LocalPosition.y
@@ -339,7 +381,8 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8228554, guid: 01d078b37a9a9b646a2e9a2b6654a386, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 01d078b37a9a9b646a2e9a2b6654a386, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &615699943

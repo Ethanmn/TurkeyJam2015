@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class Turkey_PunchState : I_ActorState
 {
+    // Timer for recovery
     private float timer;
 
     // Punch Time
@@ -11,6 +12,7 @@ public class Turkey_PunchState : I_ActorState
     void I_ActorState.OnEnter(Transform actor)
     {
         //Debug.Log("Turkey entered punch state");
+
         // Set the animation flag
         actor.GetComponent<Animator>().SetBool("IsPunching", true);
 

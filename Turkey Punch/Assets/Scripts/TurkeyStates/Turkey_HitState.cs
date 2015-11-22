@@ -19,6 +19,8 @@ public class Turkey_HitState : I_ActorState
 
         actor.GetComponent<AudioSource>().Play();
 
+        actor.GetComponent<SpriteRenderer>().sortingOrder = 0;
+
         actor.GetComponent<ActorStats>().Hurt(damage);
 
     }
