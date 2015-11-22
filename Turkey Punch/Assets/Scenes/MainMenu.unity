@@ -1750,7 +1750,7 @@ Prefab:
 
         s - Block
 
-        e - The Slay'
+        e - The Slay (At full charge)'
       objectReference: {fileID: 0}
     - target: {fileID: 11465064, guid: 59ec42c64c7698a4e932979a710e291e, type: 2}
       propertyPath: m_Text
@@ -1764,7 +1764,7 @@ Prefab:
 
         k - Block
 
-        u - Goblaser'
+        u - Goblaser (At full charge)'
       objectReference: {fileID: 0}
     - target: {fileID: 22430960, guid: 59ec42c64c7698a4e932979a710e291e, type: 2}
       propertyPath: m_AnchoredPosition.x
