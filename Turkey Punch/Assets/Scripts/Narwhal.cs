@@ -5,7 +5,7 @@ public class Narwhal : MonoBehaviour {
 
     Animator anim;
 
-    float time = 2.0f;
+    float time = 1.33f;
 
 	// Use this for initialization
 	void Start () {
@@ -26,7 +26,15 @@ public class Narwhal : MonoBehaviour {
         else
         {
             // wait the duration, turn off go time
-            anim.SetBool("GoTime", false);
+            if (time > 0)
+            {
+                time -= Time.deltaTime;
+            }
+            else
+            {
+                time = 1.33f;
+                anim.SetBool("GoTime", false);
+            }
         }
 	}
 }
