@@ -6,6 +6,8 @@ public class SantaPunch : MonoBehaviour {
     // When the punch makes contact
     void OnTriggerEnter2D(Collider2D col)
     {
+        col.transform.parent.GetComponent<SpriteRenderer>().sortingOrder = 0;
+
         // If the other hit box is the Turkey's hitbox
         if (col.name == "TurkeyHitBox")
         {

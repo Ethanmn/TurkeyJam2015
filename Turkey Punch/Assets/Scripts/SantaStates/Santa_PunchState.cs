@@ -19,6 +19,8 @@ public class Santa_PunchState : I_ActorState
         // Reset the timer
         timer = 0;
 
+        actor.gameObject.GetComponent<SpriteRenderer>().sortingOrder = 1;
+
         // Enable the hit box so it can hit things
         actor.FindChild("PunchHitBox").GetComponent<BoxCollider2D>().enabled = true;
     }

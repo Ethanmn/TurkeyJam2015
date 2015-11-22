@@ -19,6 +19,9 @@ public class Santa_BlockState : I_ActorState
         // Reset the timer
         timer = 0;
 
+        // Set the render layer below an attacker
+        actor.GetComponent<SpriteRenderer>().sortingOrder = 0;
+
         // Enable the block box so it can hit things
         actor.FindChild("SantaHitBox").GetComponent<Collider2D>().enabled = false;
     }

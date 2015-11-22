@@ -19,7 +19,10 @@ public class Turkey_BlockState : I_ActorState
         // Reset the timer
         timer = 0;
 
-        // Enable the block box so it can hit things
+        // Set the render layer below an attacker
+        actor.GetComponent<SpriteRenderer>().sortingOrder = 0;
+
+        // Dissable the hit box
         actor.FindChild("TurkeyHitBox").GetComponent<Collider2D>().enabled = false;
     }
 
@@ -30,7 +33,7 @@ public class Turkey_BlockState : I_ActorState
         // Set the animation flag
         actor.GetComponent<Animator>().SetBool("IsBlocking", false);
 
-        // Dissable the block box so it doesn't hit things
+        // Enable the hit box so it can be hit by things
         actor.FindChild("TurkeyHitBox").GetComponent<Collider2D>().enabled = true;
     }
 
