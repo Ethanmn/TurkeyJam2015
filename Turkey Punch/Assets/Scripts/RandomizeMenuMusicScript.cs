@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class RandomizeMenuScript : MonoBehaviour {
+public class RandomizeMenuMusicScript : MonoBehaviour {
 
     AudioSource aSource;
 
