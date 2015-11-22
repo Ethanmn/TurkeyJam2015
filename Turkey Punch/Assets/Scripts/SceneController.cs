@@ -57,7 +57,8 @@ public class SceneController : MonoBehaviour {
 
                 if (player1Stats.isDead() || player2Stats.isDead() || gameTimer <= 0)
                 {
-                    ui.TimerText.text = "0";
+                    if (gameTimer <= 0)
+                        ui.TimerText.text = "0";
                     nextState = GameState.Over;
                 }
                 else
