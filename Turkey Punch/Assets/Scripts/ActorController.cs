@@ -18,6 +18,9 @@ public class ActorController : MonoBehaviour
     protected KeyCode block;
     public KeyCode BLOCK { get { return block; } }
 
+    protected KeyCode special;
+    public KeyCode SPECIAL { get { return special; } }
+
     // State the character starts in
     protected I_ActorState startState;
 
