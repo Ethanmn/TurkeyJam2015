@@ -3,8 +3,6 @@ using UnityEngine;
 
 public class Santa_WalkState : I_ActorState
 {
-    int facing = 0;
-
     static float maxSpeed = 0.1f;
 
     void I_ActorState.OnEnter(Transform actor)
@@ -66,44 +64,19 @@ public class Santa_WalkState : I_ActorState
         if (Input.GetKey(ac.LEFT))
         {
             // Direction is move left 
-
             moveDir.x = -maxSpeed;
-
-            // Flip Santa's model left
-            actor.localScale = leftFace;
-            /*
-            // Flip snow particle engine left
-            if (facing != 1)
-                snow.transform.localRotation = new Quaternion(snow.transform.localRotation.x, -snow.transform.localRotation.y, snow.transform.localRotation.z, snow.transform.localRotation.w);
-            
-            // Play the effect
-            if (UnityEngine.Random.Range(0, 11) % 5 == 0)
-                snow.Play();
-                */
-
-            facing = 1;
         }
         else if (Input.GetKey(ac.RIGHT))
         {
             // Direction is move right
-
             moveDir.x = maxSpeed;
-
-            // Flip Santa's model right
-            actor.localScale = rightFace;
-            /*
-            // Flip snow particle engine right
-            if (facing != 0)
-            snow.transform.localRotation = new Quaternion(snow.transform.localRotation.x, -snow.transform.localRotation.y, snow.transform.localRotation.z, snow.transform.localRotation.w);
-            
-            // Play the effect
-            if (UnityEngine.Random.Range(0, 11) % 5 == 0)
-                snow.Play();
-                */
-
-            facing = 0;
         }
         actor.GetComponent<Animator>().SetFloat("MoveSpeed", Math.Abs(moveDir.x));
+
+        if (actor.transform.localPosition.x > GameObject.FindGameObjectWithTag("Turkey").GetComponent<Transform>().localPosition.x)
+            actor.localScale = leftFace;
+        else
+            actor.localScale = rightFace;
 
         trans.Translate(moveDir);
     }

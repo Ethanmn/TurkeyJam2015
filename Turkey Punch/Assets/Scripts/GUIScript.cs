@@ -76,10 +76,10 @@ public class GUIScript : MonoBehaviour
         switch (player)
         {
             case 1:
-                Debug.Log("Player 1 wins!");
+                Debug.Log("Player 2 wins!");
                 break;
             case 2:
-                Debug.Log("Player 2 wins!");
+                Debug.Log("Player 1 wins!");
                 break;
         }
     }
