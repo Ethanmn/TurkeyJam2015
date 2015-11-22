@@ -1,11 +1,13 @@
 fileFormatVersion: 2
 guid: 13a8f1a0ccb32404a8dcde9910c7ccb1
-timeCreated: 1448210478
+timeCreated: 1448211875
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
     21300000: Penguin_0
     21300002: Penguin_1
+    21300004: Penguin_2
+    21300006: Penguin_3
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -56,19 +58,39 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 63
-        height: 91
+        y: 78
+        width: 54
+        height: 78
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Penguin_1
       rect:
         serializedVersion: 2
-        x: 63
+        x: 54
+        y: 78
+        width: 54
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Penguin_2
+      rect:
+        serializedVersion: 2
+        x: 0
         y: 0
-        width: 63
-        height: 91
+        width: 54
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Penguin_3
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 0
+        width: 54
+        height: 78
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
