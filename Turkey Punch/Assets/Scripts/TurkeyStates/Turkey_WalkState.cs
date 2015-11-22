@@ -76,11 +76,12 @@ public class Turkey_WalkState : I_ActorState
 
         actor.GetComponent<Animator>().SetFloat("MoveSpeed", Math.Abs(moveDir.x));
 
+        
         if (actor.transform.localPosition.x > GameObject.FindGameObjectWithTag("Santa").GetComponent<Transform>().localPosition.x)
             actor.localScale = leftFace;
         else
             actor.localScale = rightFace;
-
+           
         float verticalSize = Camera.main.orthographicSize * 2.0f;
         float horizontalSize = verticalSize * Screen.width / Screen.height;
 
