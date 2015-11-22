@@ -866,7 +866,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &938620953
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1600,7 +1600,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1756495074
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1641,7 +1641,7 @@ MonoBehaviour:
     m_Alignment: 1
     m_RichText: 1
     m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
+    m_VerticalOverflow: 1
     m_LineSpacing: .899999976
   m_Text: Once Halloween is over, the Christmas decorations come out, and Turkey is
     tired of having Thanksgiving overshadowed. It's time to take matters into his
@@ -1946,31 +1946,31 @@ Prefab:
       objectReference: {fileID: 968697538}
     - target: {fileID: 108636, guid: 59ec42c64c7698a4e932979a710e291e, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 166112, guid: 59ec42c64c7698a4e932979a710e291e, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 189610, guid: 59ec42c64c7698a4e932979a710e291e, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 185386, guid: 59ec42c64c7698a4e932979a710e291e, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 176974, guid: 59ec42c64c7698a4e932979a710e291e, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 124614, guid: 59ec42c64c7698a4e932979a710e291e, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 112236, guid: 59ec42c64c7698a4e932979a710e291e, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 11423222, guid: 59ec42c64c7698a4e932979a710e291e, type: 2}
       propertyPath: m_Text
@@ -2038,7 +2038,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22407030, guid: 59ec42c64c7698a4e932979a710e291e, type: 2}
       propertyPath: m_RootOrder
-      value: 7
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 11423222, guid: 59ec42c64c7698a4e932979a710e291e, type: 2}
       propertyPath: m_FontData.m_FontSize
@@ -2050,7 +2050,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22407030, guid: 59ec42c64c7698a4e932979a710e291e, type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 30.8999996
+      value: 36.1800003
       objectReference: {fileID: 0}
     - target: {fileID: 22489034, guid: 59ec42c64c7698a4e932979a710e291e, type: 2}
       propertyPath: m_AnchoredPosition.y
@@ -2059,6 +2059,18 @@ Prefab:
     - target: {fileID: 22484074, guid: 59ec42c64c7698a4e932979a710e291e, type: 2}
       propertyPath: m_AnchoredPosition.y
       value: -387
+      objectReference: {fileID: 0}
+    - target: {fileID: 22407030, guid: 59ec42c64c7698a4e932979a710e291e, type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 11456920, guid: 59ec42c64c7698a4e932979a710e291e, type: 2}
+      propertyPath: m_FontData.m_Alignment
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 22407030, guid: 59ec42c64c7698a4e932979a710e291e, type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 59ec42c64c7698a4e932979a710e291e, type: 2}
