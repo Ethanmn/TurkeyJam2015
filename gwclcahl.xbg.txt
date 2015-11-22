@@ -1,0 +1,65 @@
+﻿Merge remote-tracking branch 'origin/master'
+
+Conflicts:
+	Turkey Punch/Assets/Music/Holiday midi.mp3.meta
+	Turkey Punch/Assets/Music/SantaFight.mp3.meta
+	Turkey Punch/Assets/Music/TurkeyFight.mp3.meta
+	Turkey Punch/Assets/Scripts/TurkeyStates/Turkey_HitState.cs
+	Turkey Punch/ProjectSettings/ProjectSettings.asset
+#
+# It looks like you may be committing a merge.
+# If this is not correct, please remove the file
+#	.git/MERGE_HEAD
+# and try again.
+
+
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+# On branch master
+# Your branch and 'origin/master' have diverged,
+# and have 1 and 5 different commits each, respectively.
+#   (use "git pull" to merge the remote branch into yours)
+#
+# All conflicts fixed but you are still merging.
+#
+# Changes to be committed:
+#	modified:   Turkey Punch/Assets/Animations/Santa.controller
+#	new file:   Turkey Punch/Assets/Animations/SantaSpecial.anim
+#	new file:   Turkey Punch/Assets/Animations/SantaSpecial.anim.meta
+#	new file:   Turkey Punch/Assets/Animations/Slay.anim
+#	new file:   Turkey Punch/Assets/Animations/Slay.anim.meta
+#	new file:   Turkey Punch/Assets/Animations/Slay.controller
+#	new file:   Turkey Punch/Assets/Animations/Slay.controller.meta
+#	modified:   Turkey Punch/Assets/Music/Holiday midi.mp3.meta
+#	new file:   Turkey Punch/Assets/Music/McTurkey(240BPM).mp3
+#	new file:   Turkey Punch/Assets/Music/McTurkey(illegalSpeed_400BPM).mp3
+#	new file:   Turkey Punch/Assets/Music/Santa(2fast2furious_240BPM).mp3
+#	renamed:    Turkey Punch/Assets/Music/SantaFight.mp3 -> Turkey Punch/Assets/Music/Santa(Original_120BPM).mp3
+#	new file:   Turkey Punch/Assets/Music/Santa(thefastandthefurious_200BPM).mp3
+#	modified:   Turkey Punch/Assets/Music/SantaFight.mp3.meta
+#	renamed:    Turkey Punch/Assets/Music/TurkeyFight.mp3 -> Turkey Punch/Assets/Music/Turkey(Classic_200BPM).mp3
+#	new file:   Turkey Punch/Assets/Music/Turkey(illegalSpeed_400BPM).mp3
+#	modified:   Turkey Punch/Assets/Music/TurkeyFight.mp3.meta
+#	new file:   Turkey Punch/Assets/Resources/Prefabs/Slay.prefab
+#	new file:   Turkey Punch/Assets/Resources/Prefabs/Slay.prefab.meta
+#	new file:   Turkey Punch/Assets/Resources/Sprites/CharacterSpritesheets/slay.png
+#	renamed:    Turkey Punch/Assets/Resources/Sprites/victory2.gif.meta -> Turkey Punch/Assets/Resources/Sprites/CharacterSpritesheets/slay.png.meta
+#	modified:   Turkey Punch/Assets/Resources/Sprites/slay.gif.meta
+#	deleted:    Turkey Punch/Assets/Resources/Sprites/victory.gif
+#	deleted:    Turkey Punch/Assets/Resources/Sprites/victory.gif.meta
+#	deleted:    Turkey Punch/Assets/Resources/Sprites/victory2.gif
+#	modified:   Turkey Punch/Assets/Scenes/FightingScene.unity
+#	modified:   Turkey Punch/Assets/Scripts/SantaPunch.cs
+#	modified:   Turkey Punch/Assets/Scripts/SantaStates/Santa_HitState.cs
+#	modified:   Turkey Punch/Assets/Scripts/SantaStates/Santa_SpecialState.cs
+#	new file:   Turkey Punch/Assets/Scripts/Slay.cs
+#	new file:   Turkey Punch/Assets/Scripts/Slay.cs.meta
+#	modified:   Turkey Punch/Assets/Scripts/TurkeyPunch.cs
+#	modified:   Turkey Punch/Assets/Scripts/TurkeyStates/Turkey_HitState.cs
+#	modified:   Turkey Punch/ProjectSettings/ProjectSettings.asset
+#	modified:   Turkey Punch/ProjectSettings/ProjectVersion.txt
+#
+# Untracked files:
+#	Turkey Punch/Assets/Resources/Sprites/slay.gif.meta~HEAD
+#
+

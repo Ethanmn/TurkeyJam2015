@@ -17,7 +17,13 @@ public class Turkey_HitState : I_ActorState
         actor.GetComponent<Animator>().SetBool("IsHit", true);
         actor.GetComponentInChildren<ParticleSystem>().Play();
 
+<<<<<<< HEAD
+        actor.GetComponent<AudioSource>().Play();
+
+        actor.GetComponent<ActorStats>().Hurt(5);
+=======
         actor.GetComponent<ActorStats>().Hurt(damage);
+>>>>>>> origin/master
     }
 
     void I_ActorState.OnExit(Transform actor)
