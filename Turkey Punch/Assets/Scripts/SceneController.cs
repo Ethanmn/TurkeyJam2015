@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class SceneController : MonoBehaviour {
-    private readonly int START_TIMER_VAL = 10, COUNTDOWN_TIMER_VAL = 4;
+    private readonly int START_TIMER_VAL = 90, COUNTDOWN_TIMER_VAL = 4;
 
     private int gameTimer, countdownTimer;
 
@@ -34,6 +34,7 @@ public class SceneController : MonoBehaviour {
         switch (currentState)
         {
             case GameState.Countdown:
+                ui.TimerText.text = START_TIMER_VAL.ToString();
                 countdownTimer = COUNTDOWN_TIMER_VAL - (int)Time.timeSinceLevelLoad;
                 if (countdownTimer > 1)
                 {
