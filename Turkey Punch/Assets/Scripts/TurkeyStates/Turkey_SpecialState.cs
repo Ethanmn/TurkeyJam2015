@@ -4,10 +4,11 @@ using UnityEngine;
 public class Turkey_SpecialState : I_ActorState
 {
     // Timer to hold the animation
-    private float timer;
+    private float animTimer, timer;
 
     // Attack Time
-    private float attackTime = 0.6f;
+    private float animTime = 0.75f;
+    private float time = 2f;
 
     void I_ActorState.OnEnter(Transform actor)
     {
@@ -15,6 +16,7 @@ public class Turkey_SpecialState : I_ActorState
         actor.GetComponent<Animator>().SetBool("IsSpecial", true);
 
         // Reset the timer
+        animTimer = 0;
         timer = 0;
 
         // Reset the speical charge
@@ -22,8 +24,8 @@ public class Turkey_SpecialState : I_ActorState
 
         actor.gameObject.GetComponent<SpriteRenderer>().sortingOrder = 1;
 
-        // Enable the hit box so it can hit things
-        //actor.FindChild("SpecialHitBox").GetComponent<BoxCollider2D>().enabled = true;
+        // Dissable the hit box so Turkey is invincible during special
+        actor.FindChild("TurkeyHitBox").GetComponent<Collider2D>().enabled = false;
     }
 
     void I_ActorState.OnExit(Transform actor)
@@ -31,26 +33,40 @@ public class Turkey_SpecialState : I_ActorState
         // Set the animation flag
         actor.GetComponent<Animator>().SetBool("IsSpecial", false);
 
-        // Dissable the hit box so it doesn't hit things
-        //actor.FindChild("SpecialHitBox").GetComponent<BoxCollider2D>().enabled = false;
+        // Enable the hit box
+        actor.FindChild("TurkeyHitBox").GetComponent<Collider2D>().enabled = true;
     }
 
     I_ActorState I_ActorState.Update(Transform actor, float dt)
     {
-        // If attack animation is over
-        if (timer >= attackTime)
+
+        if (timer >= time)
         {
-            // Exit the state
             return new Turkey_IdleState();
         }
         else
         {
+            timer += Time.deltaTime;
+        }
+
+        // If attack animation is over
+        if (animTimer >= animTime)
+        {
+            // SHOOP DA WOOOP
+            GameObject SHOOP = GameObject.Instantiate<GameObject>(Resources.Load<GameObject>("Prefabs/Goblaser"));
+            SHOOP.transform.parent = actor;
+            SHOOP.transform.localPosition = new Vector3(0, 3, 0);
+            animTimer = -1;
+            return null;
+        }
+        else if (animTimer >= 0)
+        {
             // Increment the timer
-            timer += dt;
+            animTimer += dt;
             // Stay in the state
             return null;
         }
-
+        return null;
     }
 
     I_ActorState I_ActorState.HandleInput(Transform actor)

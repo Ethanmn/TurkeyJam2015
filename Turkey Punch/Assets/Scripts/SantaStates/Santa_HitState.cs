@@ -17,7 +17,7 @@ public class Santa_HitState : I_ActorState
         actor.GetComponentInChildren<ParticleSystem>().Play();
         actor.GetComponents<AudioSource>()[0].Play();
 
-        actor.GetComponent<ActorStats>().Hurt(5);
+        actor.GetComponent<ActorStats>().Hurt(damage);
     }
 
     void I_ActorState.OnExit(Transform actor)
